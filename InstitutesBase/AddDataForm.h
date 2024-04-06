@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <msclr/marshal.h>
 #include <msclr/marshal_cppstd.h>
 #include <utility>
@@ -22,7 +22,7 @@ namespace InstitutesBase {
 	using std::pair;
 
 	/// <summary>
-	/// Сводка для AddDataForm
+	/// РЎРІРѕРґРєР° РґР»СЏ AddDataForm
 	/// </summary>
 	public ref class AddDataForm : public System::Windows::Forms::Form
 	{
@@ -31,23 +31,23 @@ namespace InstitutesBase {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 	private: System::Windows::Forms::ComboBox^ InstNameCmb;
 	public:
-		String^ filename;	// переменная для хранения пути до логотипа
-		cli::array< String^>^ instNames;	// массив для хранения названий ВУЗов
-		int arrlen;		// длина массива
-		List^ dataBase = gcnew List();	// переменная для хранения списка ВУЗов
-		List^ current = gcnew List();	// переменная для хранения текущей записи
-		List^ new_element;	// переменная для хранения данных новой записи
-		speciality* new_spec;	// переменная для новой специальности
-		map<int, speciality>* new_specs;	// словарь для списка специальностей нового ВУЗа
-		bool is_new_inst = true;	// переменная определяющая факт создания нового ВУЗа
-		bool data_added = false;	// переменная определяющая факт добавления данных в уже существующий ВУЗ
+		String^ filename;	// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РїСѓС‚Рё РґРѕ Р»РѕРіРѕС‚РёРїР°
+		cli::array< String^>^ instNames;	// РјР°СЃСЃРёРІ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РЅР°Р·РІР°РЅРёР№ Р’РЈР—РѕРІ
+		int arrlen;		// РґР»РёРЅР° РјР°СЃСЃРёРІР°
+		List^ dataBase = gcnew List();	// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ СЃРїРёСЃРєР° Р’РЈР—РѕРІ
+		List^ current = gcnew List();	// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ С‚РµРєСѓС‰РµР№ Р·Р°РїРёСЃРё
+		List^ new_element;	// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РґР°РЅРЅС‹С… РЅРѕРІРѕР№ Р·Р°РїРёСЃРё
+		speciality* new_spec;	// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ РЅРѕРІРѕР№ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё
+		map<int, speciality>* new_specs;	// СЃР»РѕРІР°СЂСЊ РґР»СЏ СЃРїРёСЃРєР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ РЅРѕРІРѕРіРѕ Р’РЈР—Р°
+		bool is_new_inst = true;	// РїРµСЂРµРјРµРЅРЅР°СЏ РѕРїСЂРµРґРµР»СЏСЋС‰Р°СЏ С„Р°РєС‚ СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕРіРѕ Р’РЈР—Р°
+		bool data_added = false;	// РїРµСЂРµРјРµРЅРЅР°СЏ РѕРїСЂРµРґРµР»СЏСЋС‰Р°СЏ С„Р°РєС‚ РґРѕР±Р°РІР»РµРЅРёСЏ РґР°РЅРЅС‹С… РІ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ Р’РЈР—
 
-		void load_names(set<string> names, List^ database)	// метод для передачи названий ВУЗов из базы данных
+		void load_names(set<string> names, List^ database)	// РјРµС‚РѕРґ РґР»СЏ РїРµСЂРµРґР°С‡Рё РЅР°Р·РІР°РЅРёР№ Р’РЈР—РѕРІ РёР· Р±Р°Р·С‹ РґР°РЅРЅС‹С…
 		{
 			dataBase = database;
 			int i = 0;
@@ -61,21 +61,21 @@ namespace InstitutesBase {
 		}
 
 
-		List^ add_new_inst() {	// функция для передачи данных новой записи в родительскую форму
+		List^ add_new_inst() {	// С„СѓРЅРєС†РёСЏ РґР»СЏ РїРµСЂРµРґР°С‡Рё РґР°РЅРЅС‹С… РЅРѕРІРѕР№ Р·Р°РїРёСЃРё РІ СЂРѕРґРёС‚РµР»СЊСЃРєСѓСЋ С„РѕСЂРјСѓ
 			return new_element;
 		}
 
-		pair<string, speciality> add_new_spec() {	// функция для передачи данных новой специальности ВУЗа в родительскую форму
+		pair<string, speciality> add_new_spec() {	// С„СѓРЅРєС†РёСЏ РґР»СЏ РїРµСЂРµРґР°С‡Рё РґР°РЅРЅС‹С… РЅРѕРІРѕР№ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё Р’РЈР—Р° РІ СЂРѕРґРёС‚РµР»СЊСЃРєСѓСЋ С„РѕСЂРјСѓ
 			marshal_context^ mrshcntx = gcnew marshal_context();
 			pair<string, speciality> addition;
-			addition.first = mrshcntx->marshal_as<string>(current->data->instName); // название ВУЗа
-			addition.second = *new_spec;	// новая специальность
+			addition.first = mrshcntx->marshal_as<string>(current->data->instName); // РЅР°Р·РІР°РЅРёРµ Р’РЈР—Р°
+			addition.second = *new_spec;	// РЅРѕРІР°СЏ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ
 			return addition;
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~AddDataForm()
 		{
@@ -116,14 +116,14 @@ namespace InstitutesBase {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -164,7 +164,7 @@ namespace InstitutesBase {
 			this->NewSaveDataBtn->Name = L"NewSaveDataBtn";
 			this->NewSaveDataBtn->Size = System::Drawing::Size(279, 85);
 			this->NewSaveDataBtn->TabIndex = 34;
-			this->NewSaveDataBtn->Text = L"Сохранить данные";
+			this->NewSaveDataBtn->Text = L"РЎРѕС…СЂР°РЅРёС‚СЊ РґР°РЅРЅС‹Рµ";
 			this->NewSaveDataBtn->UseVisualStyleBackColor = false;
 			this->NewSaveDataBtn->Click += gcnew System::EventHandler(this, &AddDataForm::NewSaveDataBtn_Click);
 			// 
@@ -177,7 +177,7 @@ namespace InstitutesBase {
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(162, 69);
 			this->label8->TabIndex = 32;
-			this->label8->Text = L"Стоимость \r\n(при договорном \r\nобучении)";
+			this->label8->Text = L"РЎС‚РѕРёРјРѕСЃС‚СЊ \r\n(РїСЂРё РґРѕРіРѕРІРѕСЂРЅРѕРј \r\nРѕР±СѓС‡РµРЅРёРё)";
 			// 
 			// label7
 			// 
@@ -188,7 +188,7 @@ namespace InstitutesBase {
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(220, 23);
 			this->label7->TabIndex = 30;
-			this->label7->Text = L"Конкурс прошлого года:";
+			this->label7->Text = L"РљРѕРЅРєСѓСЂСЃ РїСЂРѕС€Р»РѕРіРѕ РіРѕРґР°:";
 			// 
 			// label5
 			// 
@@ -199,7 +199,7 @@ namespace InstitutesBase {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(158, 23);
 			this->label5->TabIndex = 28;
-			this->label5->Text = L"Проходной балл:";
+			this->label5->Text = L"РџСЂРѕС…РѕРґРЅРѕР№ Р±Р°Р»Р»:";
 			// 
 			// NewSpNameTb
 			// 
@@ -220,7 +220,7 @@ namespace InstitutesBase {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(147, 46);
 			this->label6->TabIndex = 26;
-			this->label6->Text = L"Наименование\r\nспециальности:";
+			this->label6->Text = L"РќР°РёРјРµРЅРѕРІР°РЅРёРµ\r\nСЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё:";
 			// 
 			// LogoPb
 			// 
@@ -244,7 +244,7 @@ namespace InstitutesBase {
 			this->ChooseLogoBtn->Name = L"ChooseLogoBtn";
 			this->ChooseLogoBtn->Size = System::Drawing::Size(223, 44);
 			this->ChooseLogoBtn->TabIndex = 24;
-			this->ChooseLogoBtn->Text = L"Выбрать файл";
+			this->ChooseLogoBtn->Text = L"Р’С‹Р±СЂР°С‚СЊ С„Р°Р№Р»";
 			this->ChooseLogoBtn->UseVisualStyleBackColor = false;
 			this->ChooseLogoBtn->Click += gcnew System::EventHandler(this, &AddDataForm::ChooseLogoBtn_Click);
 			// 
@@ -257,7 +257,7 @@ namespace InstitutesBase {
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(177, 23);
 			this->label4->TabIndex = 23;
-			this->label4->Text = L"Загрузить логотип:";
+			this->label4->Text = L"Р—Р°РіСЂСѓР·РёС‚СЊ Р»РѕРіРѕС‚РёРї:";
 			// 
 			// NewPostAddressTb
 			// 
@@ -278,7 +278,7 @@ namespace InstitutesBase {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(157, 23);
 			this->label3->TabIndex = 21;
-			this->label3->Text = L"Почтовый адрес:";
+			this->label3->Text = L"РџРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ:";
 			// 
 			// label2
 			// 
@@ -289,7 +289,7 @@ namespace InstitutesBase {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(446, 27);
 			this->label2->TabIndex = 20;
-			this->label2->Text = L"Добавление новой строки в базу данных";
+			this->label2->Text = L"Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕР№ СЃС‚СЂРѕРєРё РІ Р±Р°Р·Сѓ РґР°РЅРЅС‹С…";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label1
@@ -301,7 +301,7 @@ namespace InstitutesBase {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(182, 23);
 			this->label1->TabIndex = 18;
-			this->label1->Text = L"Нименование ВУЗа:";
+			this->label1->Text = L"РќРёРјРµРЅРѕРІР°РЅРёРµ Р’РЈР—Р°:";
 			// 
 			// openFileDialog1
 			// 
@@ -354,7 +354,7 @@ namespace InstitutesBase {
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(159, 23);
 			this->label9->TabIndex = 39;
-			this->label9->Text = L"Форма обучения:";
+			this->label9->Text = L"Р¤РѕСЂРјР° РѕР±СѓС‡РµРЅРёСЏ:";
 			// 
 			// EdFormTb
 			// 
@@ -422,7 +422,7 @@ namespace InstitutesBase {
 
 		}
 #pragma endregion
-		// обработчик события загрузки окна добавления данных (происходит получение списка существующих ВУЗов из родительской формы)
+		// РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ Р·Р°РіСЂСѓР·РєРё РѕРєРЅР° РґРѕР±Р°РІР»РµРЅРёСЏ РґР°РЅРЅС‹С… (РїСЂРѕРёСЃС…РѕРґРёС‚ РїРѕР»СѓС‡РµРЅРёРµ СЃРїРёСЃРєР° СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёС… Р’РЈР—РѕРІ РёР· СЂРѕРґРёС‚РµР»СЊСЃРєРѕР№ С„РѕСЂРјС‹)
 	private: System::Void AddDataForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		String^ Stname;
 		if (instNames != nullptr)
@@ -435,26 +435,26 @@ namespace InstitutesBase {
 			InstNameCmb->Refresh();
 		}
 	}
-		   // обработчик события закрытия окна добавления данных
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ Р·Р°РєСЂС‹С‚РёСЏ РѕРєРЅР° РґРѕР±Р°РІР»РµРЅРёСЏ РґР°РЅРЅС‹С…
 	private: System::Void AddDataForm_FormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
 		Owner->Enabled = true;
-		if (data_added) MessageBox::Show("Данные успешно добавлены в список!");
+		if (data_added) MessageBox::Show("Р”Р°РЅРЅС‹Рµ СѓСЃРїРµС€РЅРѕ РґРѕР±Р°РІР»РµРЅС‹ РІ СЃРїРёСЃРѕРє!");
 	}
-		   // событие изменения текста в поле "Стоимость" запрещающее вводить что-либо кроме цифр
+		   // СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ С‚РµРєСЃС‚Р° РІ РїРѕР»Рµ "РЎС‚РѕРёРјРѕСЃС‚СЊ" Р·Р°РїСЂРµС‰Р°СЋС‰РµРµ РІРІРѕРґРёС‚СЊ С‡С‚Рѕ-Р»РёР±Рѕ РєСЂРѕРјРµ С†РёС„СЂ
 	private: System::Void CostNum_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 		if (!e->KeyChar.IsDigit(e->KeyChar) && !e->KeyChar.IsControl(e->KeyChar))
 		{
 			e->Handled = true;
 		}
 	}
-		   // событие изменения текста в поле "Форма обучения" запрещающее вводить что-либо кроме букв
+		   // СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ С‚РµРєСЃС‚Р° РІ РїРѕР»Рµ "Р¤РѕСЂРјР° РѕР±СѓС‡РµРЅРёСЏ" Р·Р°РїСЂРµС‰Р°СЋС‰РµРµ РІРІРѕРґРёС‚СЊ С‡С‚Рѕ-Р»РёР±Рѕ РєСЂРѕРјРµ Р±СѓРєРІ
 	private: System::Void EdFormTb_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 		if (!e->KeyChar.IsLetter(e->KeyChar) && !e->KeyChar.IsControl(e->KeyChar))
 		{
 			e->Handled = true;
 		}
 	}
-		   // событие нажатия на кнопку для выбора изображения  
+		   // СЃРѕР±С‹С‚РёРµ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ РґР»СЏ РІС‹Р±РѕСЂР° РёР·РѕР±СЂР°Р¶РµРЅРёСЏ  
 	private: System::Void ChooseLogoBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
 		{
@@ -463,7 +463,7 @@ namespace InstitutesBase {
 			LogoPb->Image = Image::FromFile(filename);
 		}
 	}
-		   // обработчик события выбора элемента из объекта combobox
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° СЌР»РµРјРµРЅС‚Р° РёР· РѕР±СЉРµРєС‚Р° combobox
 	private: System::Void InstNameCmb_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		if (InstNameCmb->SelectedIndex != -1)
 		{
@@ -491,25 +491,25 @@ namespace InstitutesBase {
 
 		}
 	}
-		   // событие изменения текста в поле для названия ВУЗа
+		   // СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ С‚РµРєСЃС‚Р° РІ РїРѕР»Рµ РґР»СЏ РЅР°Р·РІР°РЅРёСЏ Р’РЈР—Р°
 	private: System::Void InstNameCmb_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		NewPostAddressTb->Enabled = true;
 		ChooseLogoBtn->Enabled = true;
 		if (InstNameCmb->Items->Contains(InstNameCmb->Text)) InstNameCmb->SelectedItem = InstNameCmb->Text;
 	}
-		   // обработчик в это поле вводимых символов (разрешающий только буквы и пробелы)
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє РІ СЌС‚Рѕ РїРѕР»Рµ РІРІРѕРґРёРјС‹С… СЃРёРјРІРѕР»РѕРІ (СЂР°Р·СЂРµС€Р°СЋС‰РёР№ С‚РѕР»СЊРєРѕ Р±СѓРєРІС‹ Рё РїСЂРѕР±РµР»С‹)
 	private: System::Void InstNameCmb_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 		if (!e->KeyChar.IsLetter(e->KeyChar) && !e->KeyChar.IsControl(e->KeyChar) && !e->KeyChar.IsWhiteSpace(e->KeyChar))
 		{
 			e->Handled = true;
 		}
 	}
-		   // обработчик события нажатия на кнопку сохранения данных
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ СЃРѕС…СЂР°РЅРµРЅРёСЏ РґР°РЅРЅС‹С…
 	private: System::Void NewSaveDataBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		marshal_context^ mrshcntx = gcnew marshal_context();
-		// если есть пустые поля выдаст сообщение
-		if (InstNameCmb->Text == "" || NewPostAddressTb->Text == "" || filename == "" || NewSpNameTb->Text == "" || EdFormTb->Text == "") MessageBox::Show("Все поля должны быть заполнены!");
-		else if (InstNameCmb->SelectedIndex == -1)	// если ВУЗ не выбран
+		// РµСЃР»Рё РµСЃС‚СЊ РїСѓСЃС‚С‹Рµ РїРѕР»СЏ РІС‹РґР°СЃС‚ СЃРѕРѕР±С‰РµРЅРёРµ
+		if (InstNameCmb->Text == "" || NewPostAddressTb->Text == "" || filename == "" || NewSpNameTb->Text == "" || EdFormTb->Text == "") MessageBox::Show("Р’СЃРµ РїРѕР»СЏ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅС‹!");
+		else if (InstNameCmb->SelectedIndex == -1)	// РµСЃР»Рё Р’РЈР— РЅРµ РІС‹Р±СЂР°РЅ
 		{
 			new_element = gcnew List();
 			new_specs = new map<int, speciality>;
@@ -535,7 +535,7 @@ namespace InstitutesBase {
 			Owner->Enabled = true;
 			this->Close();
 		}
-		else   // если добаваляем специальности к существующему ВУЗу
+		else   // РµСЃР»Рё РґРѕР±Р°РІР°Р»СЏРµРј СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё Рє СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРјСѓ Р’РЈР—Сѓ
 		{
 			speciality spec;
 			new_spec = new speciality;
@@ -554,12 +554,12 @@ namespace InstitutesBase {
 			this->Close();
 		}
 	}
-		   // обработчик события закрытия формы
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ Р·Р°РєСЂС‹С‚РёСЏ С„РѕСЂРјС‹
 	private: System::Void AddDataForm_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
 		if (!data_added && InstNameCmb->Text != "" && NewPostAddressTb->Text != "" && filename != "" && NewSpNameTb->Text != "" && EdFormTb->Text != "")
 		{
 			System::Windows::Forms::DialogResult result;
-			result = MessageBox::Show("Сохраните данные перед тем как выйти!\nВы действительно хотите выйти без сохранения данных?", "Возможна утеря данных!", MessageBoxButtons::YesNo, MessageBoxIcon::Question);
+			result = MessageBox::Show("РЎРѕС…СЂР°РЅРёС‚Рµ РґР°РЅРЅС‹Рµ РїРµСЂРµРґ С‚РµРј РєР°Рє РІС‹Р№С‚Рё!\nР’С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С…РѕС‚РёС‚Рµ РІС‹Р№С‚Рё Р±РµР· СЃРѕС…СЂР°РЅРµРЅРёСЏ РґР°РЅРЅС‹С…?", "Р’РѕР·РјРѕР¶РЅР° СѓС‚РµСЂСЏ РґР°РЅРЅС‹С…!", MessageBoxButtons::YesNo, MessageBoxIcon::Question);
 			if (result == System::Windows::Forms::DialogResult::Yes) return;
 			else e->Cancel = true;
 		}

@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <msclr/marshal.h>
 #include <msclr/marshal_cppstd.h>
 #include "List.h"
@@ -18,7 +18,7 @@ namespace InstitutesBase {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для DataEditForm
+	/// РЎРІРѕРґРєР° РґР»СЏ DataEditForm
 	/// </summary>
 	public ref class DataEditForm : public System::Windows::Forms::Form
 	{
@@ -27,15 +27,15 @@ namespace InstitutesBase {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
-		List^ current = gcnew List();	// поле формы для хранения данных о записи с которой мы работаем
-		String^ spec_name;	// поле формы для хранения названия специальности
-		int spec_num;	// поле формы для хранения индекса специальности в списке специалностей
-		bool data_changed = false;	// поле формы определяющее изменены ли данные
-		bool fromSaveBtn = false;	// поле формы определяющее что форма закрыта после нажатия на кнопку сохранения изменений
+		List^ current = gcnew List();	// РїРѕР»Рµ С„РѕСЂРјС‹ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РґР°РЅРЅС‹С… Рѕ Р·Р°РїРёСЃРё СЃ РєРѕС‚РѕСЂРѕР№ РјС‹ СЂР°Р±РѕС‚Р°РµРј
+		String^ spec_name;	// РїРѕР»Рµ С„РѕСЂРјС‹ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РЅР°Р·РІР°РЅРёСЏ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё
+		int spec_num;	// РїРѕР»Рµ С„РѕСЂРјС‹ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РёРЅРґРµРєСЃР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё РІ СЃРїРёСЃРєРµ СЃРїРµС†РёР°Р»РЅРѕСЃС‚РµР№
+		bool data_changed = false;	// РїРѕР»Рµ С„РѕСЂРјС‹ РѕРїСЂРµРґРµР»СЏСЋС‰РµРµ РёР·РјРµРЅРµРЅС‹ Р»Рё РґР°РЅРЅС‹Рµ
+		bool fromSaveBtn = false;	// РїРѕР»Рµ С„РѕСЂРјС‹ РѕРїСЂРµРґРµР»СЏСЋС‰РµРµ С‡С‚Рѕ С„РѕСЂРјР° Р·Р°РєСЂС‹С‚Р° РїРѕСЃР»Рµ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ СЃРѕС…СЂР°РЅРµРЅРёСЏ РёР·РјРµРЅРµРЅРёР№
 
 	private: System::Windows::Forms::Label^ EdFormat;
 	private: System::Windows::Forms::NumericUpDown^ MinMarkNum;
@@ -45,14 +45,14 @@ namespace InstitutesBase {
 
 	public:
 
-		void set_current_spec(List^ cur, String^ name) {	// метод для передачи данных о выбранной специальности из родительской формы
+		void set_current_spec(List^ cur, String^ name) {	// РјРµС‚РѕРґ РґР»СЏ РїРµСЂРµРґР°С‡Рё РґР°РЅРЅС‹С… Рѕ РІС‹Р±СЂР°РЅРЅРѕР№ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё РёР· СЂРѕРґРёС‚РµР»СЊСЃРєРѕР№ С„РѕСЂРјС‹
 			this->current = cur;
 			this->spec_name = name;
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~DataEditForm()
 		{
@@ -93,14 +93,14 @@ namespace InstitutesBase {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -136,7 +136,7 @@ namespace InstitutesBase {
 			this->SaveDataBtn->Name = L"SaveDataBtn";
 			this->SaveDataBtn->Size = System::Drawing::Size(255, 66);
 			this->SaveDataBtn->TabIndex = 34;
-			this->SaveDataBtn->Text = L"Сохранить данные";
+			this->SaveDataBtn->Text = L"РЎРѕС…СЂР°РЅРёС‚СЊ РґР°РЅРЅС‹Рµ";
 			this->SaveDataBtn->UseVisualStyleBackColor = false;
 			this->SaveDataBtn->Click += gcnew System::EventHandler(this, &DataEditForm::SaveDataBtn_Click);
 			// 
@@ -149,7 +149,7 @@ namespace InstitutesBase {
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(195, 84);
 			this->label8->TabIndex = 32;
-			this->label8->Text = L"Стоимость \r\n(при договорном \r\nобучении)";
+			this->label8->Text = L"РЎС‚РѕРёРјРѕСЃС‚СЊ \r\n(РїСЂРё РґРѕРіРѕРІРѕСЂРЅРѕРј \r\nРѕР±СѓС‡РµРЅРёРё)";
 			// 
 			// label7
 			// 
@@ -160,7 +160,7 @@ namespace InstitutesBase {
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(262, 28);
 			this->label7->TabIndex = 30;
-			this->label7->Text = L"Конкурс прошлого года:";
+			this->label7->Text = L"РљРѕРЅРєСѓСЂСЃ РїСЂРѕС€Р»РѕРіРѕ РіРѕРґР°:";
 			// 
 			// label5
 			// 
@@ -171,7 +171,7 @@ namespace InstitutesBase {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(190, 28);
 			this->label5->TabIndex = 28;
-			this->label5->Text = L"Проходной балл:";
+			this->label5->Text = L"РџСЂРѕС…РѕРґРЅРѕР№ Р±Р°Р»Р»:";
 			// 
 			// SpNameTb
 			// 
@@ -193,7 +193,7 @@ namespace InstitutesBase {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(177, 56);
 			this->label6->TabIndex = 26;
-			this->label6->Text = L"Наименование\r\nспециальности:";
+			this->label6->Text = L"РќР°РёРјРµРЅРѕРІР°РЅРёРµ\r\nСЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё:";
 			// 
 			// label2
 			// 
@@ -204,7 +204,7 @@ namespace InstitutesBase {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(382, 35);
 			this->label2->TabIndex = 20;
-			this->label2->Text = L"Изменение данных строки";
+			this->label2->Text = L"РР·РјРµРЅРµРЅРёРµ РґР°РЅРЅС‹С… СЃС‚СЂРѕРєРё";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label1
@@ -216,7 +216,7 @@ namespace InstitutesBase {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(221, 28);
 			this->label1->TabIndex = 18;
-			this->label1->Text = L"Нименование ВУЗа:";
+			this->label1->Text = L"РќРёРјРµРЅРѕРІР°РЅРёРµ Р’РЈР—Р°:";
 			// 
 			// InstNameTb
 			// 
@@ -239,7 +239,7 @@ namespace InstitutesBase {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(190, 28);
 			this->label3->TabIndex = 21;
-			this->label3->Text = L"Почтовый адрес:";
+			this->label3->Text = L"РџРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ:";
 			// 
 			// PostAddressTb
 			// 
@@ -262,7 +262,7 @@ namespace InstitutesBase {
 			this->EdFormat->Name = L"EdFormat";
 			this->EdFormat->Size = System::Drawing::Size(198, 29);
 			this->EdFormat->TabIndex = 36;
-			this->EdFormat->Text = L"Форма обучения:";
+			this->EdFormat->Text = L"Р¤РѕСЂРјР° РѕР±СѓС‡РµРЅРёСЏ:";
 			// 
 			// EducFormTb
 			// 
@@ -353,7 +353,7 @@ namespace InstitutesBase {
 
 		}
 #pragma endregion
-	public: pair<pair<string, string>, speciality> set_update_spec() {	// функция которая возвращает в родительскую форму обновленные данные
+	public: pair<pair<string, string>, speciality> set_update_spec() {	// С„СѓРЅРєС†РёСЏ РєРѕС‚РѕСЂР°СЏ РІРѕР·РІСЂР°С‰Р°РµС‚ РІ СЂРѕРґРёС‚РµР»СЊСЃРєСѓСЋ С„РѕСЂРјСѓ РѕР±РЅРѕРІР»РµРЅРЅС‹Рµ РґР°РЅРЅС‹Рµ
 		marshal_context^ mrshcntx = gcnew marshal_context();
 		map<int, speciality> specs;
 		int index = spec_num;
@@ -362,17 +362,17 @@ namespace InstitutesBase {
 		instdata.first = mrshcntx->marshal_as<string>(current->data->instName);
 		instdata.second = mrshcntx->marshal_as<string>(current->data->postAddress);
 
-		pair<pair<string, string>, speciality> update;	// пара передаваемых значений: название ВУЗа, почтовый адрес и данные измененной специальности 
+		pair<pair<string, string>, speciality> update;	// РїР°СЂР° РїРµСЂРµРґР°РІР°РµРјС‹С… Р·РЅР°С‡РµРЅРёР№: РЅР°Р·РІР°РЅРёРµ Р’РЈР—Р°, РїРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ Рё РґР°РЅРЅС‹Рµ РёР·РјРµРЅРµРЅРЅРѕР№ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё 
 		update.first = instdata;
 		update.second = specs[index];
 		return update;
 	}
-	// обработчик события закрытой формы:
+	// РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ Р·Р°РєСЂС‹С‚РѕР№ С„РѕСЂРјС‹:
 	private: System::Void DataEditForm_FormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {	
 		Owner->Enabled = true;
-		if (data_changed) MessageBox::Show("Данные успешно сохранены!");
+		if (data_changed) MessageBox::Show("Р”Р°РЅРЅС‹Рµ СѓСЃРїРµС€РЅРѕ СЃРѕС…СЂР°РЅРµРЅС‹!");
 	}
-	// обработчик события загрузки формы:
+	// РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ Р·Р°РіСЂСѓР·РєРё С„РѕСЂРјС‹:
 	private: System::Void DataEditForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		InstNameTb->Text = current->data->instName;
 		PostAddressTb->Text = current->data->postAddress;
@@ -400,23 +400,23 @@ namespace InstitutesBase {
 
 		SaveDataBtn->Enabled = false;
 	}
-	// сообщение о том что данные не сохранены при закрытии формы
+	// СЃРѕРѕР±С‰РµРЅРёРµ Рѕ С‚РѕРј С‡С‚Рѕ РґР°РЅРЅС‹Рµ РЅРµ СЃРѕС…СЂР°РЅРµРЅС‹ РїСЂРё Р·Р°РєСЂС‹С‚РёРё С„РѕСЂРјС‹
 	private: System::Void DataEditForm_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
 		if ((!fromSaveBtn && SaveDataBtn->Enabled && data_changed) || (SaveDataBtn->Enabled && !data_changed))
 		{
 			System::Windows::Forms::DialogResult result;
-			result = MessageBox::Show("Сохраните изменения перед тем как выйти!\nВы действительно хотите выйти без сохранения изменений?", "Возможна утеря данных!", MessageBoxButtons::YesNo, MessageBoxIcon::Question);
+			result = MessageBox::Show("РЎРѕС…СЂР°РЅРёС‚Рµ РёР·РјРµРЅРµРЅРёСЏ РїРµСЂРµРґ С‚РµРј РєР°Рє РІС‹Р№С‚Рё!\nР’С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С…РѕС‚РёС‚Рµ РІС‹Р№С‚Рё Р±РµР· СЃРѕС…СЂР°РЅРµРЅРёСЏ РёР·РјРµРЅРµРЅРёР№?", "Р’РѕР·РјРѕР¶РЅР° СѓС‚РµСЂСЏ РґР°РЅРЅС‹С…!", MessageBoxButtons::YesNo, MessageBoxIcon::Question);
 			if (result == System::Windows::Forms::DialogResult::Yes) return;
 			else e->Cancel = true;
 		}
 		Owner->Enabled = true;
 		Owner->Enabled = false;
 	}
-	// обработчик события нажатия на кнопку сохранения
+	// РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ СЃРѕС…СЂР°РЅРµРЅРёСЏ
 	private: System::Void SaveDataBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (SpNameTb->Text == "" || EducFormTb->Text == "")
 		{
-			MessageBox::Show("Поля \"Наименование ВУЗа\", \"Почтовый адрес\", \"Наименование специальности\" и \"Форма обучения\" не могут быть пустыми!");
+			MessageBox::Show("РџРѕР»СЏ \"РќР°РёРјРµРЅРѕРІР°РЅРёРµ Р’РЈР—Р°\", \"РџРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ\", \"РќР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё\" Рё \"Р¤РѕСЂРјР° РѕР±СѓС‡РµРЅРёСЏ\" РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹РјРё!");
 		}
 		else
 		{
@@ -435,7 +435,7 @@ namespace InstitutesBase {
 			int i = spec_num;
 			specs = *current->data->specList;
 
-			// далее проверяется были ли изменены данные в каком-то из полей
+			// РґР°Р»РµРµ РїСЂРѕРІРµСЂСЏРµС‚СЃСЏ Р±С‹Р»Рё Р»Рё РёР·РјРµРЅРµРЅС‹ РґР°РЅРЅС‹Рµ РІ РєР°РєРѕРј-С‚Рѕ РёР· РїРѕР»РµР№
 			if (instname->CompareTo(current->data->instName) != 0)
 			{
 				current->data->instName = instname;
@@ -486,29 +486,29 @@ namespace InstitutesBase {
 			this->Close();
 		}
 	}
-	// событие изменения текста в поле "Форма обучения"
+	// СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ С‚РµРєСЃС‚Р° РІ РїРѕР»Рµ "Р¤РѕСЂРјР° РѕР±СѓС‡РµРЅРёСЏ"
 	private: System::Void EducFormTb_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		SaveDataBtn->Enabled = true;
 	}	   
-	// событие изменения текста в поле "Название специальности"
+	// СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ С‚РµРєСЃС‚Р° РІ РїРѕР»Рµ "РќР°Р·РІР°РЅРёРµ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё"
 	private: System::Void SpNameTb_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		SaveDataBtn->Enabled = true;
 	}
-	// событие изменения текста в поле "Форма обучения" запрещающее вводить что-либо кроме букв
+	// СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ С‚РµРєСЃС‚Р° РІ РїРѕР»Рµ "Р¤РѕСЂРјР° РѕР±СѓС‡РµРЅРёСЏ" Р·Р°РїСЂРµС‰Р°СЋС‰РµРµ РІРІРѕРґРёС‚СЊ С‡С‚Рѕ-Р»РёР±Рѕ РєСЂРѕРјРµ Р±СѓРєРІ
 	private: System::Void EducFormTb_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 		if (!e->KeyChar.IsLetter(e->KeyChar) && !e->KeyChar.IsControl(e->KeyChar))
 		{
 			e->Handled = true;
 		}
 	}
-	// событие изменения текста в поле "Стоимость" запрещающее вводить что-либо кроме цифр
+	// СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ С‚РµРєСЃС‚Р° РІ РїРѕР»Рµ "РЎС‚РѕРёРјРѕСЃС‚СЊ" Р·Р°РїСЂРµС‰Р°СЋС‰РµРµ РІРІРѕРґРёС‚СЊ С‡С‚Рѕ-Р»РёР±Рѕ РєСЂРѕРјРµ С†РёС„СЂ
 	private: System::Void CostNum_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 		if (!e->KeyChar.IsDigit(e->KeyChar) && !e->KeyChar.IsControl(e->KeyChar))
 		{
 			e->Handled = true;
 		}
 	}
-	// события изменения текста в поле "Название ВУЗа", "Почтовый адрес", "Проходной балл", "Конкурс прошлого года", "Стоимость"
+	// СЃРѕР±С‹С‚РёСЏ РёР·РјРµРЅРµРЅРёСЏ С‚РµРєСЃС‚Р° РІ РїРѕР»Рµ "РќР°Р·РІР°РЅРёРµ Р’РЈР—Р°", "РџРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ", "РџСЂРѕС…РѕРґРЅРѕР№ Р±Р°Р»Р»", "РљРѕРЅРєСѓСЂСЃ РїСЂРѕС€Р»РѕРіРѕ РіРѕРґР°", "РЎС‚РѕРёРјРѕСЃС‚СЊ"
 	private: System::Void MinMarkNum_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 		SaveDataBtn->Enabled = true;
 	}

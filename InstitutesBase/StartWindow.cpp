@@ -1,4 +1,4 @@
-#include "StartWindow.h"
+﻿#include "StartWindow.h"
 
 using namespace System;
 using namespace System::Windows::Forms;

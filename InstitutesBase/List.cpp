@@ -1,4 +1,4 @@
-#include <msclr/marshal.h>
+ï»¿#include <msclr/marshal.h>
 #include "List.h"
 #include <fstream>
 #include <string>
@@ -8,9 +8,9 @@ using std::ifstream;
 using std::string;
 using namespace msclr::interop;
 
-void List::AddElement(node^ instData) {	// Ìåòîä äîáàâëåíèÿ íîâîãî ýëåìåíòà â êîíåö ñïèñêà
+void List::AddElement(node^ instData) {	// ÐœÐµÑ‚Ð¾Ð´ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð½Ð¾Ð²Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð² ÐºÐ¾Ð½ÐµÑ† ÑÐ¿Ð¸ÑÐºÐ°
 
-	if (this->data != nullptr)	// Åñëè ïåðâûé ýëåìåíò ñóùåñòâóåò
+	if (this->data != nullptr)	// Ð•ÑÐ»Ð¸ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚
 	{
 		List^ newElement = gcnew List();
 		newElement->data = instData;
@@ -20,26 +20,26 @@ void List::AddElement(node^ instData) {	// Ìåòîä äîáàâëåíèÿ íîâîãî ýëåìåíòà â êî
 		while (current->data->next != nullptr) current = current->data->next;
 		current->data->next = newElement;
 	}
-	else   // Åñëè ïåðâûé ýëåìåíò ÍÅ ñóùåñòâóåò
+	else   // Ð•ÑÐ»Ð¸ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ÐÐ• ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚
 	{
 		this->data = instData;
 	}
 }
 
-void List::DeleteElement(List^ elem) {	// Ìåòîä óäàëåíèÿ ýëåìåíòà èç ñïèñêà
+void List::DeleteElement(List^ elem) {	// ÐœÐµÑ‚Ð¾Ð´ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð¸Ð· ÑÐ¿Ð¸ÑÐºÐ°
 	List^ current = gcnew List();
 	List^ previous = gcnew List();
 	current = this;
-	if (current->data->next != nullptr)	// Åñëè ñïèñîê ñîñòîèò íå èç îäíîãî ýëåìåíòà
+	if (current->data->next != nullptr)	// Ð•ÑÐ»Ð¸ ÑÐ¿Ð¸ÑÐ¾Ðº ÑÐ¾ÑÑ‚Ð¾Ð¸Ñ‚ Ð½Ðµ Ð¸Ð· Ð¾Ð´Ð½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°
 	{
 
-		if (current->data->instName->CompareTo(elem->data->instName) == 0)	// Åñëè íóæíî óäàëèòü ïåðâûé ýëåìåíò
+		if (current->data->instName->CompareTo(elem->data->instName) == 0)	// Ð•ÑÐ»Ð¸ Ð½ÑƒÐ¶Ð½Ð¾ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚
 		{
 			current = current->data->next;
 			this->data = gcnew node();
 			this->data = current->data;
 		}
-		else   // Åñëè óäàëÿåì íå ïåðâûé
+		else   // Ð•ÑÐ»Ð¸ ÑƒÐ´Ð°Ð»ÑÐµÐ¼ Ð½Ðµ Ð¿ÐµÑ€Ð²Ñ‹Ð¹
 		{
 			while (current->data->next != nullptr)
 			{
@@ -47,12 +47,12 @@ void List::DeleteElement(List^ elem) {	// Ìåòîä óäàëåíèÿ ýëåìåíòà èç ñïèñêà
 				current = current->data->next;
 				if (current->data->instName->CompareTo(elem->data->instName) == 0)
 				{
-					if (current->data->next != nullptr)	// Åñëè íàéäåííûé ýëåìåíò íå ïîñëåäíèé â ñïèñêå
+					if (current->data->next != nullptr)	// Ð•ÑÐ»Ð¸ Ð½Ð°Ð¹Ð´ÐµÐ½Ð½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð½Ðµ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½Ð¸Ð¹ Ð² ÑÐ¿Ð¸ÑÐºÐµ
 					{
 						previous->data->next = current->data->next;
 						current->data->next = nullptr;
 					}
-					else   // Åñëè îí ïîñëåäíèé
+					else   // Ð•ÑÐ»Ð¸ Ð¾Ð½ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½Ð¸Ð¹
 					{
 						previous->data->next = nullptr;
 					}
@@ -61,7 +61,7 @@ void List::DeleteElement(List^ elem) {	// Ìåòîä óäàëåíèÿ ýëåìåíòà èç ñïèñêà
 		}
 
 	}
-	else   // Åñëè â ñïèñêå âñåãî îäèí ýëåìåíò
+	else   // Ð•ÑÐ»Ð¸ Ð² ÑÐ¿Ð¸ÑÐºÐµ Ð²ÑÐµÐ³Ð¾ Ð¾Ð´Ð¸Ð½ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚
 	{
 		this->data = nullptr;
 	}

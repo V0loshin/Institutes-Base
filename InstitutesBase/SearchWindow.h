@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <msclr/marshal.h>
 #include <msclr/marshal_cppstd.h>
 #include <list>;
@@ -21,7 +21,7 @@ namespace InstitutesBase {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для SearchWindow
+	/// РЎРІРѕРґРєР° РґР»СЏ SearchWindow
 	/// </summary>
 	public ref class SearchWindow : public System::Windows::Forms::Form
 	{
@@ -30,13 +30,13 @@ namespace InstitutesBase {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~SearchWindow()
 		{
@@ -106,14 +106,14 @@ namespace InstitutesBase {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -167,7 +167,7 @@ namespace InstitutesBase {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(252, 27);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Поиск по первой букве:";
+			this->label1->Text = L"РџРѕРёСЃРє РїРѕ РїРµСЂРІРѕР№ Р±СѓРєРІРµ:";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// FirstLetter
@@ -175,9 +175,9 @@ namespace InstitutesBase {
 			this->FirstLetter->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->FirstLetter->FormattingEnabled = true;
 			this->FirstLetter->Items->AddRange(gcnew cli::array< System::Object^  >(33) {
-				L"А", L"Б", L"В", L"Г", L"Д", L"Е", L"Ё", L"Ж",
-					L"З", L"И", L"Й", L"К", L"Л", L"М", L"Н", L"О", L"П", L"Р", L"С", L"Т", L"У", L"Ф", L"Ч", L"Ц", L"Ч", L"Ш", L"Щ", L"Ъ", L"Ы",
-					L"Ь", L"Э", L"Ю", L"Я"
+				L"Рђ", L"Р‘", L"Р’", L"Р“", L"Р”", L"Р•", L"РЃ", L"Р–",
+					L"Р—", L"Р", L"Р™", L"Рљ", L"Р›", L"Рњ", L"Рќ", L"Рћ", L"Рџ", L"Р ", L"РЎ", L"Рў", L"РЈ", L"Р¤", L"Р§", L"Р¦", L"Р§", L"РЁ", L"Р©", L"РЄ", L"Р«",
+					L"Р¬", L"Р­", L"Р®", L"РЇ"
 			});
 			this->FirstLetter->Location = System::Drawing::Point(276, 64);
 			this->FirstLetter->Margin = System::Windows::Forms::Padding(2);
@@ -195,7 +195,7 @@ namespace InstitutesBase {
 			this->LetterSearch->Name = L"LetterSearch";
 			this->LetterSearch->Size = System::Drawing::Size(231, 49);
 			this->LetterSearch->TabIndex = 2;
-			this->LetterSearch->Text = L"Найти";
+			this->LetterSearch->Text = L"РќР°Р№С‚Рё";
 			this->LetterSearch->UseVisualStyleBackColor = false;
 			this->LetterSearch->Click += gcnew System::EventHandler(this, &SearchWindow::LetterSearch_Click);
 			// 
@@ -209,7 +209,7 @@ namespace InstitutesBase {
 			this->NoLetterFilter->Name = L"NoLetterFilter";
 			this->NoLetterFilter->Size = System::Drawing::Size(231, 50);
 			this->NoLetterFilter->TabIndex = 3;
-			this->NoLetterFilter->Text = L"Сбросить фильтр";
+			this->NoLetterFilter->Text = L"РЎР±СЂРѕСЃРёС‚СЊ С„РёР»СЊС‚СЂ";
 			this->NoLetterFilter->UseVisualStyleBackColor = false;
 			this->NoLetterFilter->Click += gcnew System::EventHandler(this, &SearchWindow::NoLetterFilter_Click);
 			// 
@@ -236,7 +236,7 @@ namespace InstitutesBase {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(163, 27);
 			this->label2->TabIndex = 5;
-			this->label2->Text = L"Список ВУЗов";
+			this->label2->Text = L"РЎРїРёСЃРѕРє Р’РЈР—РѕРІ";
 			// 
 			// groupBox1
 			// 
@@ -285,7 +285,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			this->Speciality->DefaultCellStyle = dataGridViewCellStyle2;
-			this->Speciality->HeaderText = L"Специальность";
+			this->Speciality->HeaderText = L"РЎРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ";
 			this->Speciality->MinimumWidth = 6;
 			this->Speciality->Name = L"Speciality";
 			this->Speciality->Width = 415;
@@ -294,7 +294,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			this->EducationalType->DefaultCellStyle = dataGridViewCellStyle3;
-			this->EducationalType->HeaderText = L"Форма обучения";
+			this->EducationalType->HeaderText = L"Р¤РѕСЂРјР° РѕР±СѓС‡РµРЅРёСЏ";
 			this->EducationalType->MinimumWidth = 6;
 			this->EducationalType->Name = L"EducationalType";
 			this->EducationalType->Width = 90;
@@ -303,7 +303,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			this->MinMark->DefaultCellStyle = dataGridViewCellStyle4;
-			this->MinMark->HeaderText = L"Проходной балл";
+			this->MinMark->HeaderText = L"РџСЂРѕС…РѕРґРЅРѕР№ Р±Р°Р»Р»";
 			this->MinMark->MinimumWidth = 6;
 			this->MinMark->Name = L"MinMark";
 			this->MinMark->Width = 77;
@@ -312,7 +312,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			this->LastMinMark->DefaultCellStyle = dataGridViewCellStyle5;
-			this->LastMinMark->HeaderText = L"Конкурс прошлого года";
+			this->LastMinMark->HeaderText = L"РљРѕРЅРєСѓСЂСЃ РїСЂРѕС€Р»РѕРіРѕ РіРѕРґР°";
 			this->LastMinMark->MinimumWidth = 6;
 			this->LastMinMark->Name = L"LastMinMark";
 			this->LastMinMark->Width = 77;
@@ -321,7 +321,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			this->Cost->DefaultCellStyle = dataGridViewCellStyle6;
-			this->Cost->HeaderText = L"Стоимость при договорном обучении";
+			this->Cost->HeaderText = L"РЎС‚РѕРёРјРѕСЃС‚СЊ РїСЂРё РґРѕРіРѕРІРѕСЂРЅРѕРј РѕР±СѓС‡РµРЅРёРё";
 			this->Cost->MinimumWidth = 6;
 			this->Cost->Name = L"Cost";
 			this->Cost->Width = 90;
@@ -336,7 +336,7 @@ namespace InstitutesBase {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(397, 27);
 			this->label3->TabIndex = 8;
-			this->label3->Text = L"Специальности и проходные баллы";
+			this->label3->Text = L"РЎРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё Рё РїСЂРѕС…РѕРґРЅС‹Рµ Р±Р°Р»Р»С‹";
 			// 
 			// label4
 			// 
@@ -348,7 +348,7 @@ namespace InstitutesBase {
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(189, 54);
 			this->label4->TabIndex = 9;
-			this->label4->Text = L"Критерии поиска\r\nспециальностей";
+			this->label4->Text = L"РљСЂРёС‚РµСЂРёРё РїРѕРёСЃРєР°\r\nСЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№";
 			this->label4->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label5
@@ -361,7 +361,7 @@ namespace InstitutesBase {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(130, 23);
 			this->label5->TabIndex = 10;
-			this->label5->Text = L"По названию:";
+			this->label5->Text = L"РџРѕ РЅР°Р·РІР°РЅРёСЋ:";
 			// 
 			// SpNameBox
 			// 
@@ -383,7 +383,7 @@ namespace InstitutesBase {
 			this->NameSearchBtn->Name = L"NameSearchBtn";
 			this->NameSearchBtn->Size = System::Drawing::Size(219, 50);
 			this->NameSearchBtn->TabIndex = 12;
-			this->NameSearchBtn->Text = L"Найти по названию";
+			this->NameSearchBtn->Text = L"РќР°Р№С‚Рё РїРѕ РЅР°Р·РІР°РЅРёСЋ";
 			this->NameSearchBtn->UseVisualStyleBackColor = false;
 			this->NameSearchBtn->Click += gcnew System::EventHandler(this, &SearchWindow::NameSearchBtn_Click);
 			// 
@@ -397,7 +397,7 @@ namespace InstitutesBase {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(227, 46);
 			this->label6->TabIndex = 13;
-			this->label6->Text = L"По диапазону проходных\r\nбаллов";
+			this->label6->Text = L"РџРѕ РґРёР°РїР°Р·РѕРЅСѓ РїСЂРѕС…РѕРґРЅС‹С…\r\nР±Р°Р»Р»РѕРІ";
 			this->label6->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label7
@@ -410,7 +410,7 @@ namespace InstitutesBase {
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(26, 19);
 			this->label7->TabIndex = 14;
-			this->label7->Text = L"от";
+			this->label7->Text = L"РѕС‚";
 			// 
 			// label8
 			// 
@@ -422,7 +422,7 @@ namespace InstitutesBase {
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(27, 19);
 			this->label8->TabIndex = 15;
-			this->label8->Text = L"до";
+			this->label8->Text = L"РґРѕ";
 			// 
 			// RangeSearchBtn
 			// 
@@ -434,7 +434,7 @@ namespace InstitutesBase {
 			this->RangeSearchBtn->Name = L"RangeSearchBtn";
 			this->RangeSearchBtn->Size = System::Drawing::Size(280, 57);
 			this->RangeSearchBtn->TabIndex = 18;
-			this->RangeSearchBtn->Text = L"Найти по диапазону баллов";
+			this->RangeSearchBtn->Text = L"РќР°Р№С‚Рё РїРѕ РґРёР°РїР°Р·РѕРЅСѓ Р±Р°Р»Р»РѕРІ";
 			this->RangeSearchBtn->UseVisualStyleBackColor = false;
 			this->RangeSearchBtn->Click += gcnew System::EventHandler(this, &SearchWindow::RangeSearchBtn_Click);
 			// 
@@ -448,7 +448,7 @@ namespace InstitutesBase {
 			this->ClearFiltersBtn->Name = L"ClearFiltersBtn";
 			this->ClearFiltersBtn->Size = System::Drawing::Size(280, 52);
 			this->ClearFiltersBtn->TabIndex = 19;
-			this->ClearFiltersBtn->Text = L"Сбросить фильтры";
+			this->ClearFiltersBtn->Text = L"РЎР±СЂРѕСЃРёС‚СЊ С„РёР»СЊС‚СЂС‹";
 			this->ClearFiltersBtn->UseVisualStyleBackColor = false;
 			this->ClearFiltersBtn->Click += gcnew System::EventHandler(this, &SearchWindow::ClearFiltersBtn_Click);
 			// 
@@ -521,23 +521,23 @@ namespace InstitutesBase {
 
 		}
 #pragma endregion
-		// событие загрузки окна поиска
+		// СЃРѕР±С‹С‚РёРµ Р·Р°РіСЂСѓР·РєРё РѕРєРЅР° РїРѕРёСЃРєР°
 	private: System::Void SearchWindow_Load(System::Object^ sender, System::EventArgs^ e) {
 		set<string> namesList;
 		dataBase->LoadData();
 		String^ Stname;
-		if (dataBase->elemsCount != 0) // если элементов в базе нет список ВУЗов пуст
+		if (dataBase->elemsCount != 0) // РµСЃР»Рё СЌР»РµРјРµРЅС‚РѕРІ РІ Р±Р°Р·Рµ РЅРµС‚ СЃРїРёСЃРѕРє Р’РЈР—РѕРІ РїСѓСЃС‚
 		{
 			namesList = dataBase->SearchInstNames();
 		}
 		
 		InstList->Items->Clear();
-		if (namesList.empty()) // если данных нет - форма не откроется
+		if (namesList.empty()) // РµСЃР»Рё РґР°РЅРЅС‹С… РЅРµС‚ - С„РѕСЂРјР° РЅРµ РѕС‚РєСЂРѕРµС‚СЃСЏ
 		{
-			MessageBox::Show("В базе данных не найдено записей!");
+			MessageBox::Show("Р’ Р±Р°Р·Рµ РґР°РЅРЅС‹С… РЅРµ РЅР°Р№РґРµРЅРѕ Р·Р°РїРёСЃРµР№!");
 			this->Close();
 		}
-		else { // иначе загружается список названий ВУЗов
+		else { // РёРЅР°С‡Рµ Р·Р°РіСЂСѓР¶Р°РµС‚СЃСЏ СЃРїРёСЃРѕРє РЅР°Р·РІР°РЅРёР№ Р’РЈР—РѕРІ
 			for (string name : namesList)
 			{
 				Stname = marshal_as<String^>(name);
@@ -547,7 +547,7 @@ namespace InstitutesBase {
 
 		InstList->Refresh();
 	}
-		   // обработчик события выбора элемента из списка названий ВУЗов
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° СЌР»РµРјРµРЅС‚Р° РёР· СЃРїРёСЃРєР° РЅР°Р·РІР°РЅРёР№ Р’РЈР—РѕРІ
 	private: System::Void InstList_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		List^ current = gcnew List();
 		String^ selItem;
@@ -587,14 +587,14 @@ namespace InstitutesBase {
 		}
 		SpecTable->Invalidate();
 	}
-		   // обработчик события закрытия окна поиска данных
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ Р·Р°РєСЂС‹С‚РёСЏ РѕРєРЅР° РїРѕРёСЃРєР° РґР°РЅРЅС‹С…
 	private: System::Void SearchWindow_FormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
 		Owner->Show();
 	}
-		   // событие нажатия на кнопку поиска ВУЗов по первой букве
+		   // СЃРѕР±С‹С‚РёРµ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ РїРѕРёСЃРєР° Р’РЈР—РѕРІ РїРѕ РїРµСЂРІРѕР№ Р±СѓРєРІРµ
 	private: System::Void LetterSearch_Click(System::Object^ sender, System::EventArgs^ e) {
-		// если буква не выбрана выйдет сообщение
-		if (FirstLetter->SelectedItem == nullptr) MessageBox::Show("Выберите первую букву для поиска");
+		// РµСЃР»Рё Р±СѓРєРІР° РЅРµ РІС‹Р±СЂР°РЅР° РІС‹Р№РґРµС‚ СЃРѕРѕР±С‰РµРЅРёРµ
+		if (FirstLetter->SelectedItem == nullptr) MessageBox::Show("Р’С‹Р±РµСЂРёС‚Рµ РїРµСЂРІСѓСЋ Р±СѓРєРІСѓ РґР»СЏ РїРѕРёСЃРєР°");
 		else
 		{
 			OpenFileDialog^ open_dialog = gcnew OpenFileDialog();
@@ -619,19 +619,19 @@ namespace InstitutesBase {
 						InstList->Items->Add(marshal_as<String^>(name));
 					}
 				}
-				if (InstList->Items->Count == 0) MessageBox::Show("Записи на заданную букву не найдены!");
+				if (InstList->Items->Count == 0) MessageBox::Show("Р—Р°РїРёСЃРё РЅР° Р·Р°РґР°РЅРЅСѓСЋ Р±СѓРєРІСѓ РЅРµ РЅР°Р№РґРµРЅС‹!");
 			}
 			InstList->Refresh();
 		}
 	}
-		   // событие сброса фильтра поиска ВУЗов по букве
+		   // СЃРѕР±С‹С‚РёРµ СЃР±СЂРѕСЃР° С„РёР»СЊС‚СЂР° РїРѕРёСЃРєР° Р’РЈР—РѕРІ РїРѕ Р±СѓРєРІРµ
 	private: System::Void NoLetterFilter_Click(System::Object^ sender, System::EventArgs^ e) {
 		InstList->Items->Clear();
 		set<string> namesList;
 		namesList = dataBase->SearchInstNames();
 		String^ Stname;
 
-		if (namesList.empty()) InstList->Items->Add("В базе данных записи не найдены!");
+		if (namesList.empty()) InstList->Items->Add("Р’ Р±Р°Р·Рµ РґР°РЅРЅС‹С… Р·Р°РїРёСЃРё РЅРµ РЅР°Р№РґРµРЅС‹!");
 		else {
 			for (string name : namesList)
 			{
@@ -642,10 +642,10 @@ namespace InstitutesBase {
 		InstList->Refresh();
 		FirstLetter->SelectedIndex = -1;
 	}
-		   // событие нажатия на кнопку поиска специальностей по названию
+		   // СЃРѕР±С‹С‚РёРµ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ РїРѕРёСЃРєР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ РїРѕ РЅР°Р·РІР°РЅРёСЋ
 	private: System::Void NameSearchBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (SpNameBox->Text == "") MessageBox::Show("Введите строку для поиска!");
-		else if (SpNameBox->Text != "" && InstList->SelectedIndex == -1) MessageBox::Show("Выберите ВУЗ для поиска специальностей по данному параметру!");
+		if (SpNameBox->Text == "") MessageBox::Show("Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ РґР»СЏ РїРѕРёСЃРєР°!");
+		else if (SpNameBox->Text != "" && InstList->SelectedIndex == -1) MessageBox::Show("Р’С‹Р±РµСЂРёС‚Рµ Р’РЈР— РґР»СЏ РїРѕРёСЃРєР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ РїРѕ РґР°РЅРЅРѕРјСѓ РїР°СЂР°РјРµС‚СЂСѓ!");
 		else
 		{
 			String^ selItem;
@@ -671,14 +671,14 @@ namespace InstitutesBase {
 				}
 				SpecTable->Invalidate();
 			}
-			else MessageBox::Show("Специальости с таким названием не найдено!");
+			else MessageBox::Show("РЎРїРµС†РёР°Р»СЊРѕСЃС‚Рё СЃ С‚Р°РєРёРј РЅР°Р·РІР°РЅРёРµРј РЅРµ РЅР°Р№РґРµРЅРѕ!");
 
 		}
 	}
-		   // событие нажатия на кнопку поиска специальностей по диапазону баллов
+		   // СЃРѕР±С‹С‚РёРµ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ РїРѕРёСЃРєР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ РїРѕ РґРёР°РїР°Р·РѕРЅСѓ Р±Р°Р»Р»РѕРІ
 	private: System::Void RangeSearchBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (minimum->Value > maximum->Value) MessageBox::Show("Некорректные данные!\nНижняя граница не может иметь значение больше верхней!");
-		else if (InstList->SelectedIndex == -1) MessageBox::Show("Выберите ВУЗ для поиска специальностей по данному параметру!");
+		if (minimum->Value > maximum->Value) MessageBox::Show("РќРµРєРѕСЂСЂРµРєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ!\nРќРёР¶РЅСЏСЏ РіСЂР°РЅРёС†Р° РЅРµ РјРѕР¶РµС‚ РёРјРµС‚СЊ Р·РЅР°С‡РµРЅРёРµ Р±РѕР»СЊС€Рµ РІРµСЂС…РЅРµР№!");
+		else if (InstList->SelectedIndex == -1) MessageBox::Show("Р’С‹Р±РµСЂРёС‚Рµ Р’РЈР— РґР»СЏ РїРѕРёСЃРєР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ РїРѕ РґР°РЅРЅРѕРјСѓ РїР°СЂР°РјРµС‚СЂСѓ!");
 		else
 		{
 			String^ selItem;
@@ -704,11 +704,11 @@ namespace InstitutesBase {
 				}
 				SpecTable->Invalidate();
 			}
-			else MessageBox::Show("Специальости с заданными баллами не найдено!");
+			else MessageBox::Show("РЎРїРµС†РёР°Р»СЊРѕСЃС‚Рё СЃ Р·Р°РґР°РЅРЅС‹РјРё Р±Р°Р»Р»Р°РјРё РЅРµ РЅР°Р№РґРµРЅРѕ!");
 
 		}
 	}
-		   // событие нажатия на кнопку сброса фильтров для поиска специальностей
+		   // СЃРѕР±С‹С‚РёРµ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ СЃР±СЂРѕСЃР° С„РёР»СЊС‚СЂРѕРІ РґР»СЏ РїРѕРёСЃРєР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№
 	private: System::Void ClearFiltersBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (InstList->SelectedIndex != -1)
 		{

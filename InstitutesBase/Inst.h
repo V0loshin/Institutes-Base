@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <map>
 #include <string>
 #include <set>
@@ -12,20 +12,20 @@ using std::set;
 using std::forward_list;
 using std::string;
 
-public ref class Inst :public List	// класс базы данных ВУЗов наследующий класс списка List
+public ref class Inst :public List	// РєР»Р°СЃСЃ Р±Р°Р·С‹ РґР°РЅРЅС‹С… Р’РЈР—РѕРІ РЅР°СЃР»РµРґСѓСЋС‰РёР№ РєР»Р°СЃСЃ СЃРїРёСЃРєР° List
 {
 
 public:
-	int elemsCount;		// поле для хранения количества записей в базе данных
+	int elemsCount;		// РїРѕР»Рµ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІР° Р·Р°РїРёСЃРµР№ РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С…
 
-	Inst() {	// конструктор класса
+	Inst() {	// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР°
 		elemsCount = 0;
 	}
 
-	void LoadData();	// метод для загрузки данных из файла с расширением json
-	void UploadData();	// метод для выгрузки данных в файл с расширением json
-	set<string> SearchInstNames();	// метод для поиска названий ВУЗов в списке
-	map<int, speciality> SpNameSearch(String^ Inst, String^ name);	// метод для поиска специальностей по названию
-	map<int, speciality> RangeSearch(String^ Inst, int min, int max);	// метод для поиска специальностей по диапазону проходных баллов
-	map<int, speciality> UpdateData(bool new_data, speciality upd, List^ current);	// метод для изменения данных выбранной специальности
+	void LoadData();	// РјРµС‚РѕРґ РґР»СЏ Р·Р°РіСЂСѓР·РєРё РґР°РЅРЅС‹С… РёР· С„Р°Р№Р»Р° СЃ СЂР°СЃС€РёСЂРµРЅРёРµРј json
+	void UploadData();	// РјРµС‚РѕРґ РґР»СЏ РІС‹РіСЂСѓР·РєРё РґР°РЅРЅС‹С… РІ С„Р°Р№Р» СЃ СЂР°СЃС€РёСЂРµРЅРёРµРј json
+	set<string> SearchInstNames();	// РјРµС‚РѕРґ РґР»СЏ РїРѕРёСЃРєР° РЅР°Р·РІР°РЅРёР№ Р’РЈР—РѕРІ РІ СЃРїРёСЃРєРµ
+	map<int, speciality> SpNameSearch(String^ Inst, String^ name);	// РјРµС‚РѕРґ РґР»СЏ РїРѕРёСЃРєР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ РїРѕ РЅР°Р·РІР°РЅРёСЋ
+	map<int, speciality> RangeSearch(String^ Inst, int min, int max);	// РјРµС‚РѕРґ РґР»СЏ РїРѕРёСЃРєР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ РїРѕ РґРёР°РїР°Р·РѕРЅСѓ РїСЂРѕС…РѕРґРЅС‹С… Р±Р°Р»Р»РѕРІ
+	map<int, speciality> UpdateData(bool new_data, speciality upd, List^ current);	// РјРµС‚РѕРґ РґР»СЏ РёР·РјРµРЅРµРЅРёСЏ РґР°РЅРЅС‹С… РІС‹Р±СЂР°РЅРЅРѕР№ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё
 };

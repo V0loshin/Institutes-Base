@@ -1,4 +1,4 @@
-#include <msclr/marshal.h>
+п»ї#include <msclr/marshal.h>
 #include <msclr/marshal_cppstd.h>
 #include "Inst.h"
 #include <fstream>
@@ -26,19 +26,19 @@ std::wstring ConvertStrToWstr(string str) {
 	return converter.from_bytes(str);
 }
 
-void Inst::LoadData() {		// метод для загрузки данных из файла с расширением json
-	marshal_context^ mrshcntx = gcnew marshal_context();	// элемент для конвиртирования типов
-	node^ data;	// структура для записи текущих данных
-	speciality new_spec;	// структура для записи данных о текущей специальности
-	nlohmann::json j;	// объект для загрузки данных из файла с расширением json
-	bool formatted_data = false;	// булевая переменная для определения типа получаемых из файла данных (если wstring - true; если string - false)
-	bool is_empty_file = false;		// булевая переменная для определения является ли файл пустым
+void Inst::LoadData() {		// РјРµС‚РѕРґ РґР»СЏ Р·Р°РіСЂСѓР·РєРё РґР°РЅРЅС‹С… РёР· С„Р°Р№Р»Р° СЃ СЂР°СЃС€РёСЂРµРЅРёРµРј json
+	marshal_context^ mrshcntx = gcnew marshal_context();	// СЌР»РµРјРµРЅС‚ РґР»СЏ РєРѕРЅРІРёСЂС‚РёСЂРѕРІР°РЅРёСЏ С‚РёРїРѕРІ
+	node^ data;	// СЃС‚СЂСѓРєС‚СѓСЂР° РґР»СЏ Р·Р°РїРёСЃРё С‚РµРєСѓС‰РёС… РґР°РЅРЅС‹С…
+	speciality new_spec;	// СЃС‚СЂСѓРєС‚СѓСЂР° РґР»СЏ Р·Р°РїРёСЃРё РґР°РЅРЅС‹С… Рѕ С‚РµРєСѓС‰РµР№ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё
+	nlohmann::json j;	// РѕР±СЉРµРєС‚ РґР»СЏ Р·Р°РіСЂСѓР·РєРё РґР°РЅРЅС‹С… РёР· С„Р°Р№Р»Р° СЃ СЂР°СЃС€РёСЂРµРЅРёРµРј json
+	bool formatted_data = false;	// Р±СѓР»РµРІР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ С‚РёРїР° РїРѕР»СѓС‡Р°РµРјС‹С… РёР· С„Р°Р№Р»Р° РґР°РЅРЅС‹С… (РµСЃР»Рё wstring - true; РµСЃР»Рё string - false)
+	bool is_empty_file = false;		// Р±СѓР»РµРІР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ СЏРІР»СЏРµС‚СЃСЏ Р»Рё С„Р°Р№Р» РїСѓСЃС‚С‹Рј
 
-	ifstream fin("Data.json");	// открываем поток для чтения
+	ifstream fin("Data.json");	// РѕС‚РєСЂС‹РІР°РµРј РїРѕС‚РѕРє РґР»СЏ С‡С‚РµРЅРёСЏ
 	if (fin.is_open())
 	{
 
-		try		// проверяем наличие данных в файле и корректность данных
+		try		// РїСЂРѕРІРµСЂСЏРµРј РЅР°Р»РёС‡РёРµ РґР°РЅРЅС‹С… РІ С„Р°Р№Р»Рµ Рё РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РґР°РЅРЅС‹С…
 		{
 			j = nlohmann::json::parse(fin);
 		}
@@ -46,12 +46,12 @@ void Inst::LoadData() {		// метод для загрузки данных из файла с расширением jso
 		{
 			is_empty_file = true;
 		}
-		if (!is_empty_file)		// если файл не пустой
+		if (!is_empty_file)		// РµСЃР»Рё С„Р°Р№Р» РЅРµ РїСѓСЃС‚РѕР№
 		{
 			for (int i = 0; i < j["Institutes"].size(); i++)
 			{
 				data = gcnew node();
-				try    // проверяем тип в котором хрянятся данные: wstring или string
+				try    // РїСЂРѕРІРµСЂСЏРµРј С‚РёРї РІ РєРѕС‚РѕСЂРѕРј С…СЂСЏРЅСЏС‚СЃСЏ РґР°РЅРЅС‹Рµ: wstring РёР»Рё string
 				{
 					data->instName = marshal_as<String^>(ConvertStrToWstr(j["Institutes"][i]["name"].get<string>()));
 				}
@@ -59,7 +59,7 @@ void Inst::LoadData() {		// метод для загрузки данных из файла с расширением jso
 				{
 					formatted_data = true;
 				}
-				if (!formatted_data)	// Если string
+				if (!formatted_data)	// Р•СЃР»Рё string
 				{
 					data->logo = marshal_as<String^>(ConvertStrToWstr(j["Institutes"][i]["logo"].get<string>()));
 					data->postAddress = marshal_as<String^>(ConvertStrToWstr(j["Institutes"][i]["postaddress"].get<string>()));
@@ -84,7 +84,7 @@ void Inst::LoadData() {		// метод для загрузки данных из файла с расширением jso
 					else this->AddElement(data);
 					elemsCount++;
 				}
-				else   // Если wstring
+				else   // Р•СЃР»Рё wstring
 				{
 					data->instName = marshal_as<String^>(j["Institutes"][i]["name"].get<std::wstring>().c_str());
 					data->logo = marshal_as<String^>(j["Institutes"][i]["logo"].get<std::wstring>().c_str());
@@ -113,19 +113,19 @@ void Inst::LoadData() {		// метод для загрузки данных из файла с расширением jso
 			}
 		}
 	}
-	fin.close();	// закрываем поток для чтения
+	fin.close();	// Р·Р°РєСЂС‹РІР°РµРј РїРѕС‚РѕРє РґР»СЏ С‡С‚РµРЅРёСЏ
 }
 
-set<string> Inst::SearchInstNames() {	// метод для поиска названий ВУЗов в списке
+set<string> Inst::SearchInstNames() {	// РјРµС‚РѕРґ РґР»СЏ РїРѕРёСЃРєР° РЅР°Р·РІР°РЅРёР№ Р’РЈР—РѕРІ РІ СЃРїРёСЃРєРµ
 	marshal_context^ mrshcntx = gcnew marshal_context();
-	set<string> names;	// множество которое мы возвращаем
+	set<string> names;	// РјРЅРѕР¶РµСЃС‚РІРѕ РєРѕС‚РѕСЂРѕРµ РјС‹ РІРѕР·РІСЂР°С‰Р°РµРј
 	set<string>* namesptr = new set<string>;
 	string name;
 	List^ current = gcnew List();
-	if (this != nullptr)	// Проверяем налиичие элементов в списке
+	if (this != nullptr)	// РџСЂРѕРІРµСЂСЏРµРј РЅР°Р»РёРёС‡РёРµ СЌР»РµРјРµРЅС‚РѕРІ РІ СЃРїРёСЃРєРµ
 	{
 		current = this;
-		while (current->data->next != nullptr)	// пробегаем по списку и записываем названия ВУЗов
+		while (current->data->next != nullptr)	// РїСЂРѕР±РµРіР°РµРј РїРѕ СЃРїРёСЃРєСѓ Рё Р·Р°РїРёСЃС‹РІР°РµРј РЅР°Р·РІР°РЅРёСЏ Р’РЈР—РѕРІ
 		{
 			name = mrshcntx->marshal_as<string>(current->data->instName);
 			namesptr->insert(name);
@@ -135,23 +135,23 @@ set<string> Inst::SearchInstNames() {	// метод для поиска названий ВУЗов в списк
 		namesptr->insert(name);
 	}
 	names = *namesptr;
-	return names;	// возвращаем множество названий
+	return names;	// РІРѕР·РІСЂР°С‰Р°РµРј РјРЅРѕР¶РµСЃС‚РІРѕ РЅР°Р·РІР°РЅРёР№
 }
 
-map<int, speciality> Inst::SpNameSearch(String^ Inst, String^ name) {	// метод поиска специальностей по названию
+map<int, speciality> Inst::SpNameSearch(String^ Inst, String^ name) {	// РјРµС‚РѕРґ РїРѕРёСЃРєР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ РїРѕ РЅР°Р·РІР°РЅРёСЋ
 	List^ current = gcnew List();
 	map<int, speciality> specs;
-	map<int, speciality> res_map;	// возвращаемый список специальностей
+	map<int, speciality> res_map;	// РІРѕР·РІСЂР°С‰Р°РµРјС‹Р№ СЃРїРёСЃРѕРє СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№
 	int count = 0;
 	current = this;
-	while (current->data->instName->CompareTo(Inst) != 0)	// с помощью цикла находим нужный ВУЗ 
+	while (current->data->instName->CompareTo(Inst) != 0)	// СЃ РїРѕРјРѕС‰СЊСЋ С†РёРєР»Р° РЅР°С…РѕРґРёРј РЅСѓР¶РЅС‹Р№ Р’РЈР— 
 	{
 		current = current->data->next;
 	}
 
-	specs = *current->data->specList;	// получаем список специальностей этого ВУЗа
+	specs = *current->data->specList;	// РїРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ СЌС‚РѕРіРѕ Р’РЈР—Р°
 
-	for (int i = 0; i < specs.size(); i++)	// пробегаем по списку и в случае совпадения названия специальности и искомого добавляем в итоговый список
+	for (int i = 0; i < specs.size(); i++)	// РїСЂРѕР±РµРіР°РµРј РїРѕ СЃРїРёСЃРєСѓ Рё РІ СЃР»СѓС‡Р°Рµ СЃРѕРІРїР°РґРµРЅРёСЏ РЅР°Р·РІР°РЅРёСЏ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё Рё РёСЃРєРѕРјРѕРіРѕ РґРѕР±Р°РІР»СЏРµРј РІ РёС‚РѕРіРѕРІС‹Р№ СЃРїРёСЃРѕРє
 	{
 		if (name->CompareTo(marshal_as<String^>((&specs[i])->spec_name)) == 0)
 		{
@@ -162,10 +162,10 @@ map<int, speciality> Inst::SpNameSearch(String^ Inst, String^ name) {	// метод п
 	return res_map;
 }
 
-map<int, speciality> Inst::RangeSearch(String^ Inst, int min, int max) {	// метод поиска специальности по диапазону проходных баллов
+map<int, speciality> Inst::RangeSearch(String^ Inst, int min, int max) {	// РјРµС‚РѕРґ РїРѕРёСЃРєР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё РїРѕ РґРёР°РїР°Р·РѕРЅСѓ РїСЂРѕС…РѕРґРЅС‹С… Р±Р°Р»Р»РѕРІ
 	List^ current = gcnew List();
 	map<int, speciality> specs;
-	map<int, speciality> res_map;	// возвращаемый список специальностей
+	map<int, speciality> res_map;	// РІРѕР·РІСЂР°С‰Р°РµРјС‹Р№ СЃРїРёСЃРѕРє СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№
 	int count = 0;
 	current = this;
 	while (current->data->instName->CompareTo(Inst) != 0)
@@ -173,9 +173,9 @@ map<int, speciality> Inst::RangeSearch(String^ Inst, int min, int max) {	// мето
 		current = current->data->next;
 	}
 
-	specs = *current->data->specList;	// получаем список специальностей этого ВУЗа
+	specs = *current->data->specList;	// РїРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ СЌС‚РѕРіРѕ Р’РЈР—Р°
 
-	for (int i = 0; i < specs.size(); i++)	// пробегаем по списку и в случае совпадения названия специальности и искомого добавляем в итоговый список
+	for (int i = 0; i < specs.size(); i++)	// РїСЂРѕР±РµРіР°РµРј РїРѕ СЃРїРёСЃРєСѓ Рё РІ СЃР»СѓС‡Р°Рµ СЃРѕРІРїР°РґРµРЅРёСЏ РЅР°Р·РІР°РЅРёСЏ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё Рё РёСЃРєРѕРјРѕРіРѕ РґРѕР±Р°РІР»СЏРµРј РІ РёС‚РѕРіРѕРІС‹Р№ СЃРїРёСЃРѕРє
 	{
 		if (specs[i].min_mark >= min && specs[i].min_mark <= max)
 		{
@@ -186,14 +186,14 @@ map<int, speciality> Inst::RangeSearch(String^ Inst, int min, int max) {	// мето
 	return res_map;
 }
 
-map<int, speciality> Inst::UpdateData(bool new_data, speciality upd, List^ current) {	// метод обновления данных выбранной специальности
+map<int, speciality> Inst::UpdateData(bool new_data, speciality upd, List^ current) {	// РјРµС‚РѕРґ РѕР±РЅРѕРІР»РµРЅРёСЏ РґР°РЅРЅС‹С… РІС‹Р±СЂР°РЅРЅРѕР№ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё
 	int i = 0;
 	map<int, speciality> specs;
 	speciality spec;
 
-	specs = *current->data->specList;	// получаем список специальностей ВУЗа
+	specs = *current->data->specList;	// РїРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№ Р’РЈР—Р°
 
-	if (new_data)	// если специальность новая то добавляем её в список специальностей
+	if (new_data)	// РµСЃР»Рё СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ РЅРѕРІР°СЏ С‚Рѕ РґРѕР±Р°РІР»СЏРµРј РµС‘ РІ СЃРїРёСЃРѕРє СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№
 	{
 		while (specs.find(i) != specs.end()) i++;
 
@@ -205,7 +205,7 @@ map<int, speciality> Inst::UpdateData(bool new_data, speciality upd, List^ curre
 
 		specs.insert(make_pair(i, spec));
 	}
-	else   // если редактируем существующую то находим её по ключу в словаре и меняем её данные
+	else   // РµСЃР»Рё СЂРµРґР°РєС‚РёСЂСѓРµРј СЃСѓС‰РµСЃС‚РІСѓСЋС‰СѓСЋ С‚Рѕ РЅР°С…РѕРґРёРј РµС‘ РїРѕ РєР»СЋС‡Сѓ РІ СЃР»РѕРІР°СЂРµ Рё РјРµРЅСЏРµРј РµС‘ РґР°РЅРЅС‹Рµ
 	{
 		for (auto it = specs.begin(); it != specs.end(); it++)
 		{
@@ -225,12 +225,12 @@ map<int, speciality> Inst::UpdateData(bool new_data, speciality upd, List^ curre
 	return specs;
 }
 
-void Inst::UploadData() {	// метод выгрузки данных в файл
+void Inst::UploadData() {	// РјРµС‚РѕРґ РІС‹РіСЂСѓР·РєРё РґР°РЅРЅС‹С… РІ С„Р°Р№Р»
 	setlocale(LC_ALL, "Rus");
-	nlohmann::json jout;	// объект для загрузки данных из файла с расширением json
-	ofstream json_out("Data.json", std::ios::out);	// открываем файл для записи
+	nlohmann::json jout;	// РѕР±СЉРµРєС‚ РґР»СЏ Р·Р°РіСЂСѓР·РєРё РґР°РЅРЅС‹С… РёР· С„Р°Р№Р»Р° СЃ СЂР°СЃС€РёСЂРµРЅРёРµРј json
+	ofstream json_out("Data.json", std::ios::out);	// РѕС‚РєСЂС‹РІР°РµРј С„Р°Р№Р» РґР»СЏ Р·Р°РїРёСЃРё
 
-	if (this->elemsCount != 0)	// выполняем выгрузку только если в базе есть данные
+	if (this->elemsCount != 0)	// РІС‹РїРѕР»РЅСЏРµРј РІС‹РіСЂСѓР·РєСѓ С‚РѕР»СЊРєРѕ РµСЃР»Рё РІ Р±Р°Р·Рµ РµСЃС‚СЊ РґР°РЅРЅС‹Рµ
 	{
 		marshal_context^ mrshcntx = gcnew marshal_context();
 		msclr::interop::marshal_context context;
@@ -250,7 +250,7 @@ void Inst::UploadData() {	// метод выгрузки данных в файл
 			std::wstring sp_ed_form = context.marshal_as<std::wstring>(marshal_as<String^>(specs[0].ed_form));
 
 			jout["Institutes"].push_back({ {"name", name}, {"logo", logo}, {"postaddress", post}, {"specialities", {{sp_name, sp_ed_form, specs[0].min_mark, specs[0].last_min_mark, specs[0].cost}}} });
-			if (specs.size() > 1)	// записываем в json объект остальные специальности ВУЗа если их больше 1
+			if (specs.size() > 1)	// Р·Р°РїРёСЃС‹РІР°РµРј РІ json РѕР±СЉРµРєС‚ РѕСЃС‚Р°Р»СЊРЅС‹Рµ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё Р’РЈР—Р° РµСЃР»Рё РёС… Р±РѕР»СЊС€Рµ 1
 			{
 				j = 0;
 				while (j != specs.size() - 1)
@@ -262,9 +262,9 @@ void Inst::UploadData() {	// метод выгрузки данных в файл
 					jout["Institutes"][i]["specialities"].push_back({ sp_name, sp_ed_form, it->second.min_mark, it->second.last_min_mark, it->second.cost });
 				}
 			}
-			current = current->data->next;	// переходим к следующему ВУЗу
+			current = current->data->next;	// РїРµСЂРµС…РѕРґРёРј Рє СЃР»РµРґСѓСЋС‰РµРјСѓ Р’РЈР—Сѓ
 		}
-		json_out << std::setw(4) << jout;	// выводим все данные в файл
+		json_out << std::setw(4) << jout;	// РІС‹РІРѕРґРёРј РІСЃРµ РґР°РЅРЅС‹Рµ РІ С„Р°Р№Р»
 	}
-	json_out.close();	// закрываем файл для записи
+	json_out.close();	// Р·Р°РєСЂС‹РІР°РµРј С„Р°Р№Р» РґР»СЏ Р·Р°РїРёСЃРё
 }

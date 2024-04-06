@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 namespace InstitutesBase {
 
@@ -10,7 +10,7 @@ namespace InstitutesBase {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для InfoForm
+	/// РЎРІРѕРґРєР° РґР»СЏ InfoForm
 	/// </summary>
 	public ref class InfoForm : public System::Windows::Forms::Form
 	{
@@ -19,13 +19,13 @@ namespace InstitutesBase {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~InfoForm()
 		{
@@ -49,14 +49,14 @@ namespace InstitutesBase {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -83,7 +83,7 @@ namespace InstitutesBase {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(171, 26);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"О ПРОГРАММЕ";
+			this->label1->Text = L"Рћ РџР РћР“Р РђРњРњР•";
 			// 
 			// label2
 			// 
@@ -106,7 +106,7 @@ namespace InstitutesBase {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(132, 26);
 			this->label3->TabIndex = 2;
-			this->label3->Text = L"ОБ АВТОРЕ";
+			this->label3->Text = L"РћР‘ РђР’РўРћР Р•";
 			// 
 			// label4
 			// 
@@ -117,7 +117,7 @@ namespace InstitutesBase {
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(171, 38);
 			this->label4->TabIndex = 3;
-			this->label4->Text = L"Автор: Волошин И. Д.\r\nГруппа: КЭ-203\r\n";
+			this->label4->Text = L"РђРІС‚РѕСЂ: Р’РѕР»РѕС€РёРЅ Р. Р”.\r\nР“СЂСѓРїРїР°: РљР­-203\r\n";
 			this->label4->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// label5
@@ -129,7 +129,7 @@ namespace InstitutesBase {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(360, 18);
 			this->label5->TabIndex = 4;
-			this->label5->Text = L"По любым вопросам можно связаться со мной:";
+			this->label5->Text = L"РџРѕ Р»СЋР±С‹Рј РІРѕРїСЂРѕСЃР°Рј РјРѕР¶РЅРѕ СЃРІСЏР·Р°С‚СЊСЃСЏ СЃРѕ РјРЅРѕР№:";
 			// 
 			// TelegramLink
 			// 
@@ -180,7 +180,7 @@ namespace InstitutesBase {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(88, 18);
 			this->label6->TabIndex = 12;
-			this->label6->Text = L"ВКонтакте: ";
+			this->label6->Text = L"Р’РљРѕРЅС‚Р°РєС‚Рµ: ";
 			// 
 			// label7
 			// 
@@ -202,7 +202,7 @@ namespace InstitutesBase {
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(54, 18);
 			this->label8->TabIndex = 14;
-			this->label8->Text = L"Почта:";
+			this->label8->Text = L"РџРѕС‡С‚Р°:";
 			// 
 			// InfoForm
 			// 
@@ -230,7 +230,7 @@ namespace InstitutesBase {
 
 		}
 #pragma endregion
-		// событие закрытия формы 
+		// СЃРѕР±С‹С‚РёРµ Р·Р°РєСЂС‹С‚РёСЏ С„РѕСЂРјС‹ 
 	private: System::Void InfoForm_FormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
 		Owner->Enabled = true;
 	}

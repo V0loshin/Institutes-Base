@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include "SearchWindow.h"
 #include "EditWindow.h"
 #include "InfoForm.h"
@@ -14,7 +14,7 @@ namespace InstitutesBase {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для StartWindow
+	/// РЎРІРѕРґРєР° РґР»СЏ StartWindow
 	/// </summary>
 	public ref class StartWindow : public System::Windows::Forms::Form
 	{
@@ -23,13 +23,13 @@ namespace InstitutesBase {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~StartWindow()
 		{
@@ -53,7 +53,7 @@ namespace InstitutesBase {
 
 
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
-	private: System::Windows::Forms::ToolStripMenuItem^ обАвтореToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ РѕР±РђРІС‚РѕСЂРµToolStripMenuItem;
 	private: System::Windows::Forms::Button^ button1;
 
 
@@ -69,14 +69,14 @@ namespace InstitutesBase {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -87,7 +87,7 @@ namespace InstitutesBase {
 			this->btn_search = (gcnew System::Windows::Forms::Button());
 			this->btn_editbase = (gcnew System::Windows::Forms::Button());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->обАвтореToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->РѕР±РђРІС‚РѕСЂРµToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->menuStrip1->SuspendLayout();
@@ -103,7 +103,7 @@ namespace InstitutesBase {
 			this->label1->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->label1->Size = System::Drawing::Size(561, 29);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Добро пожаловать в справочник абитуриента!";
+			this->label1->Text = L"Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РІ СЃРїСЂР°РІРѕС‡РЅРёРє Р°Р±РёС‚СѓСЂРёРµРЅС‚Р°!";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// pictureBox1
@@ -126,7 +126,7 @@ namespace InstitutesBase {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(433, 27);
 			this->label3->TabIndex = 3;
-			this->label3->Text = L"Выбеите режим работы со справочником:";
+			this->label3->Text = L"Р’С‹Р±РµРёС‚Рµ СЂРµР¶РёРј СЂР°Р±РѕС‚С‹ СЃРѕ СЃРїСЂР°РІРѕС‡РЅРёРєРѕРј:";
 			this->label3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// btn_search
@@ -139,7 +139,7 @@ namespace InstitutesBase {
 			this->btn_search->Name = L"btn_search";
 			this->btn_search->Size = System::Drawing::Size(256, 106);
 			this->btn_search->TabIndex = 4;
-			this->btn_search->Text = L"Поиск ВУЗов и специальностей";
+			this->btn_search->Text = L"РџРѕРёСЃРє Р’РЈР—РѕРІ Рё СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№";
 			this->btn_search->UseVisualStyleBackColor = false;
 			this->btn_search->Click += gcnew System::EventHandler(this, &StartWindow::btn_search_Click);
 			// 
@@ -153,13 +153,13 @@ namespace InstitutesBase {
 			this->btn_editbase->Name = L"btn_editbase";
 			this->btn_editbase->Size = System::Drawing::Size(249, 106);
 			this->btn_editbase->TabIndex = 5;
-			this->btn_editbase->Text = L"Редактирование базы данных";
+			this->btn_editbase->Text = L"Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С…";
 			this->btn_editbase->UseVisualStyleBackColor = false;
 			this->btn_editbase->Click += gcnew System::EventHandler(this, &StartWindow::btn_editbase_Click);
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->обАвтореToolStripMenuItem });
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->РѕР±РђРІС‚РѕСЂРµToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
@@ -167,14 +167,14 @@ namespace InstitutesBase {
 			this->menuStrip1->TabIndex = 9;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
-			// обАвтореToolStripMenuItem
+			// РѕР±РђРІС‚РѕСЂРµToolStripMenuItem
 			// 
-			this->обАвтореToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->РѕР±РђРІС‚РѕСЂРµToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->обАвтореToolStripMenuItem->Name = L"обАвтореToolStripMenuItem";
-			this->обАвтореToolStripMenuItem->Size = System::Drawing::Size(49, 25);
-			this->обАвтореToolStripMenuItem->Text = L"Info";
-			this->обАвтореToolStripMenuItem->Click += gcnew System::EventHandler(this, &StartWindow::обАвтореToolStripMenuItem_Click);
+			this->РѕР±РђРІС‚РѕСЂРµToolStripMenuItem->Name = L"РѕР±РђРІС‚РѕСЂРµToolStripMenuItem";
+			this->РѕР±РђРІС‚РѕСЂРµToolStripMenuItem->Size = System::Drawing::Size(49, 25);
+			this->РѕР±РђРІС‚РѕСЂРµToolStripMenuItem->Text = L"Info";
+			this->РѕР±РђРІС‚РѕСЂРµToolStripMenuItem->Click += gcnew System::EventHandler(this, &StartWindow::РѕР±РђРІС‚РѕСЂРµToolStripMenuItem_Click);
 			// 
 			// button1
 			// 
@@ -214,22 +214,22 @@ namespace InstitutesBase {
 
 		}
 #pragma endregion
-		// обработчик события наажатия на кнопку "Поиск ВУЗов"
+		// РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ "РџРѕРёСЃРє Р’РЈР—РѕРІ"
 	private: System::Void btn_search_Click(System::Object^ sender, System::EventArgs^ e) {
 		SearchWindow^ searchForm = gcnew SearchWindow();
 		searchForm->Owner = this;
 		this->Hide();
 		searchForm->Show();
 	}
-		   // обработчик события наажатия на кнопку "Редактирование базы данных"
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С…"
 	private: System::Void btn_editbase_Click(System::Object^ sender, System::EventArgs^ e) {
 		EditWindow^ editForm = gcnew EditWindow();
 		editForm->Show();
 		editForm->Owner = this;
 		this->Hide();
 	}
-		   // обработчик события наажатия на кнопку "Info" на верхней панели меню
-	private: System::Void обАвтореToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ "Info" РЅР° РІРµСЂС…РЅРµР№ РїР°РЅРµР»Рё РјРµРЅСЋ
+	private: System::Void РѕР±РђРІС‚РѕСЂРµToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		InfoForm^ infoForm = gcnew InfoForm();
 		infoForm->Show();
 		infoForm->Owner = this;

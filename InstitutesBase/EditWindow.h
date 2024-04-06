@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <msclr/marshal.h>
 #include <msclr/marshal_cppstd.h>
 #include "AddDataForm.h"
@@ -19,7 +19,7 @@ namespace InstitutesBase {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для EditWindow
+	/// РЎРІРѕРґРєР° РґР»СЏ EditWindow
 	/// </summary>
 	public ref class EditWindow : public System::Windows::Forms::Form
 	{
@@ -28,22 +28,22 @@ namespace InstitutesBase {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
-		Inst^ dataBase = gcnew Inst();	// база данных
-		List^ current = gcnew List();	// текущий ВУЗ
-		bool data_changed = false;	// переменная определяющая изменены ли данные
-		bool data_added = false;	// переменная определяющая добавлены ли данные
-		int sel_row = 0;	// переменная для хранения индекса выбранной из таблицы строки
-		AddDataForm^ addForm;	// переменная формы добавления данных
-		DataEditForm^ editForm;		// переменная формы изменения данных
-		map<int, speciality>* speclist;	// список специальностей
+		Inst^ dataBase = gcnew Inst();	// Р±Р°Р·Р° РґР°РЅРЅС‹С…
+		List^ current = gcnew List();	// С‚РµРєСѓС‰РёР№ Р’РЈР—
+		bool data_changed = false;	// РїРµСЂРµРјРµРЅРЅР°СЏ РѕРїСЂРµРґРµР»СЏСЋС‰Р°СЏ РёР·РјРµРЅРµРЅС‹ Р»Рё РґР°РЅРЅС‹Рµ
+		bool data_added = false;	// РїРµСЂРµРјРµРЅРЅР°СЏ РѕРїСЂРµРґРµР»СЏСЋС‰Р°СЏ РґРѕР±Р°РІР»РµРЅС‹ Р»Рё РґР°РЅРЅС‹Рµ
+		int sel_row = 0;	// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РёРЅРґРµРєСЃР° РІС‹Р±СЂР°РЅРЅРѕР№ РёР· С‚Р°Р±Р»РёС†С‹ СЃС‚СЂРѕРєРё
+		AddDataForm^ addForm;	// РїРµСЂРµРјРµРЅРЅР°СЏ С„РѕСЂРјС‹ РґРѕР±Р°РІР»РµРЅРёСЏ РґР°РЅРЅС‹С…
+		DataEditForm^ editForm;		// РїРµСЂРµРјРµРЅРЅР°СЏ С„РѕСЂРјС‹ РёР·РјРµРЅРµРЅРёСЏ РґР°РЅРЅС‹С…
+		map<int, speciality>* speclist;	// СЃРїРёСЃРѕРє СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~EditWindow()
 		{
@@ -98,14 +98,14 @@ namespace InstitutesBase {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -142,7 +142,7 @@ namespace InstitutesBase {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(148, 27);
 			this->label3->TabIndex = 10;
-			this->label3->Text = L"База данных";
+			this->label3->Text = L"Р‘Р°Р·Р° РґР°РЅРЅС‹С…";
 			// 
 			// DataBaseTable
 			// 
@@ -179,7 +179,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			this->InstName->DefaultCellStyle = dataGridViewCellStyle2;
-			this->InstName->HeaderText = L"Наименование ВУЗа";
+			this->InstName->HeaderText = L"РќР°РёРјРµРЅРѕРІР°РЅРёРµ Р’РЈР—Р°";
 			this->InstName->MinimumWidth = 6;
 			this->InstName->Name = L"InstName";
 			this->InstName->ReadOnly = true;
@@ -189,7 +189,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			this->Post->DefaultCellStyle = dataGridViewCellStyle3;
-			this->Post->HeaderText = L"Почтовый адрес";
+			this->Post->HeaderText = L"РџРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ";
 			this->Post->MinimumWidth = 6;
 			this->Post->Name = L"Post";
 			this->Post->ReadOnly = true;
@@ -199,7 +199,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			this->Speciality->DefaultCellStyle = dataGridViewCellStyle4;
-			this->Speciality->HeaderText = L"Специальность";
+			this->Speciality->HeaderText = L"РЎРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ";
 			this->Speciality->MinimumWidth = 6;
 			this->Speciality->Name = L"Speciality";
 			this->Speciality->ReadOnly = true;
@@ -209,7 +209,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			this->EducationalType->DefaultCellStyle = dataGridViewCellStyle5;
-			this->EducationalType->HeaderText = L"Форма обучения";
+			this->EducationalType->HeaderText = L"Р¤РѕСЂРјР° РѕР±СѓС‡РµРЅРёСЏ";
 			this->EducationalType->MinimumWidth = 6;
 			this->EducationalType->Name = L"EducationalType";
 			this->EducationalType->ReadOnly = true;
@@ -219,7 +219,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			this->MinMark->DefaultCellStyle = dataGridViewCellStyle6;
-			this->MinMark->HeaderText = L"Проходной балл";
+			this->MinMark->HeaderText = L"РџСЂРѕС…РѕРґРЅРѕР№ Р±Р°Р»Р»";
 			this->MinMark->MinimumWidth = 6;
 			this->MinMark->Name = L"MinMark";
 			this->MinMark->ReadOnly = true;
@@ -229,7 +229,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			this->LastMinMark->DefaultCellStyle = dataGridViewCellStyle7;
-			this->LastMinMark->HeaderText = L"Конкурс прошлого года";
+			this->LastMinMark->HeaderText = L"РљРѕРЅРєСѓСЂСЃ РїСЂРѕС€Р»РѕРіРѕ РіРѕРґР°";
 			this->LastMinMark->MinimumWidth = 6;
 			this->LastMinMark->Name = L"LastMinMark";
 			this->LastMinMark->ReadOnly = true;
@@ -239,7 +239,7 @@ namespace InstitutesBase {
 			// 
 			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			this->Cost->DefaultCellStyle = dataGridViewCellStyle8;
-			this->Cost->HeaderText = L"Стоимость при договорном обучении";
+			this->Cost->HeaderText = L"РЎС‚РѕРёРјРѕСЃС‚СЊ РїСЂРё РґРѕРіРѕРІРѕСЂРЅРѕРј РѕР±СѓС‡РµРЅРёРё";
 			this->Cost->MinimumWidth = 6;
 			this->Cost->Name = L"Cost";
 			this->Cost->ReadOnly = true;
@@ -256,7 +256,7 @@ namespace InstitutesBase {
 			this->btn_edit->Name = L"btn_edit";
 			this->btn_edit->Size = System::Drawing::Size(285, 66);
 			this->btn_edit->TabIndex = 11;
-			this->btn_edit->Text = L"Редактировать строку";
+			this->btn_edit->Text = L"Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ СЃС‚СЂРѕРєСѓ";
 			this->btn_edit->UseVisualStyleBackColor = false;
 			this->btn_edit->Click += gcnew System::EventHandler(this, &EditWindow::btn_edit_Click);
 			// 
@@ -270,7 +270,7 @@ namespace InstitutesBase {
 			this->btn_add->Name = L"btn_add";
 			this->btn_add->Size = System::Drawing::Size(285, 66);
 			this->btn_add->TabIndex = 12;
-			this->btn_add->Text = L"Добавить строку";
+			this->btn_add->Text = L"Р”РѕР±Р°РІРёС‚СЊ СЃС‚СЂРѕРєСѓ";
 			this->btn_add->UseVisualStyleBackColor = false;
 			this->btn_add->Click += gcnew System::EventHandler(this, &EditWindow::btn_add_Click);
 			// 
@@ -285,7 +285,7 @@ namespace InstitutesBase {
 			this->DeleteBtn->Name = L"DeleteBtn";
 			this->DeleteBtn->Size = System::Drawing::Size(285, 66);
 			this->DeleteBtn->TabIndex = 13;
-			this->DeleteBtn->Text = L"Удалить строку";
+			this->DeleteBtn->Text = L"РЈРґР°Р»РёС‚СЊ СЃС‚СЂРѕРєСѓ";
 			this->DeleteBtn->UseVisualStyleBackColor = false;
 			this->DeleteBtn->Click += gcnew System::EventHandler(this, &EditWindow::DeleteBtn_Click);
 			// 
@@ -315,7 +315,7 @@ namespace InstitutesBase {
 
 		}
 #pragma endregion
-		// метод вывода данных в таблицу
+		// РјРµС‚РѕРґ РІС‹РІРѕРґР° РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ
 	public: void DrawData() {
 		map<int, speciality> specs;
 		int index = 0;
@@ -368,12 +368,12 @@ namespace InstitutesBase {
 			DataBaseTable[6, 0]->Value = "";
 			btn_edit->Enabled = false;
 			DeleteBtn->Enabled = false;
-			MessageBox::Show("В базе данных не найдено ни одной записи!");
+			MessageBox::Show("Р’ Р±Р°Р·Рµ РґР°РЅРЅС‹С… РЅРµ РЅР°Р№РґРµРЅРѕ РЅРё РѕРґРЅРѕР№ Р·Р°РїРёСЃРё!");
 		}
 	}
-		  // обработчик события нажатия на кнопку редактирования записи
+		  // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ Р·Р°РїРёСЃРё
 	private: System::Void btn_edit_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (sel_row == -1) MessageBox::Show("Выберите одну строку или ячейку для редактирования соответствующей строки!");
+		if (sel_row == -1) MessageBox::Show("Р’С‹Р±РµСЂРёС‚Рµ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ РёР»Рё СЏС‡РµР№РєСѓ РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµР№ СЃС‚СЂРѕРєРё!");
 		else
 		{
 			this->Enabled = false;
@@ -385,7 +385,7 @@ namespace InstitutesBase {
 			
 		}
 	}
-		   // обработчик события нажатия на кнопку добавления записи
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ РґРѕР±Р°РІР»РµРЅРёСЏ Р·Р°РїРёСЃРё
 	private: System::Void btn_add_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Enabled = false;
 		addForm = gcnew AddDataForm();
@@ -395,13 +395,13 @@ namespace InstitutesBase {
 		addForm->Owner = this;
 		
 	}
-		   // обработчик события закрытия окна редактирования данных
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ Р·Р°РєСЂС‹С‚РёСЏ РѕРєРЅР° СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РґР°РЅРЅС‹С…
 	private: System::Void EditWindow_FormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
 		Owner->Enabled = false;
 		Owner->Enabled = true;
 		Owner->Show();
 	}
-		   // обработчик события загрузки данного окна 
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ Р·Р°РіСЂСѓР·РєРё РґР°РЅРЅРѕРіРѕ РѕРєРЅР° 
 	private: System::Void EditWindow_Load(System::Object^ sender, System::EventArgs^ e) {
 		dataBase->LoadData();
 		this->DrawData();
@@ -409,7 +409,7 @@ namespace InstitutesBase {
 		DeleteBtn->Enabled = false;
 		DataBaseTable->ClearSelection();
 	}
-		   // обработчик события нажатия на клетку таблицы
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєР»РµС‚РєСѓ С‚Р°Р±Р»РёС†С‹
 	private: System::Void DataBaseTable_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		btn_edit->Enabled = true;
 		DeleteBtn->Enabled = true;
@@ -423,18 +423,18 @@ namespace InstitutesBase {
 			else break;
 		}
 	}
-		   // событие нажатия на кнопку удаления выбранной строки
+		   // СЃРѕР±С‹С‚РёРµ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ СѓРґР°Р»РµРЅРёСЏ РІС‹Р±СЂР°РЅРЅРѕР№ СЃС‚СЂРѕРєРё
 	private: System::Void DeleteBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		System::Windows::Forms::DialogResult result;
-		result = MessageBox::Show("Вы действительно хотите безвозвратно удалить эти данные?", "Вы уверены?", MessageBoxButtons::YesNo, MessageBoxIcon::Question);
+		result = MessageBox::Show("Р’С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С…РѕС‚РёС‚Рµ Р±РµР·РІРѕР·РІСЂР°С‚РЅРѕ СѓРґР°Р»РёС‚СЊ СЌС‚Рё РґР°РЅРЅС‹Рµ?", "Р’С‹ СѓРІРµСЂРµРЅС‹?", MessageBoxButtons::YesNo, MessageBoxIcon::Question);
 		if (result == System::Windows::Forms::DialogResult::Yes)
 		{
-			if (current->data->specList->size() == 1) // если у ВУЗа одна специальность удаляется вся информация о ВУЗе
+			if (current->data->specList->size() == 1) // РµСЃР»Рё Сѓ Р’РЈР—Р° РѕРґРЅР° СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ СѓРґР°Р»СЏРµС‚СЃСЏ РІСЃСЏ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р’РЈР—Рµ
 			{
-				dataBase->DeleteElement(current);	// удаление выбранного элемента
+				dataBase->DeleteElement(current);	// СѓРґР°Р»РµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
 				dataBase->elemsCount--;
 			}
-			else   // иначе удаляется только выбранная специальность
+			else   // РёРЅР°С‡Рµ СѓРґР°Р»СЏРµС‚СЃСЏ С‚РѕР»СЊРєРѕ РІС‹Р±СЂР°РЅРЅР°СЏ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ
 			{
 				map<int, speciality> specs;
 				marshal_context^ mrshcntx = gcnew marshal_context();
@@ -457,9 +457,9 @@ namespace InstitutesBase {
 			DeleteBtn->Enabled = false;
 		}
 	}
-		   // событие перед закрытием окна
+		   // СЃРѕР±С‹С‚РёРµ РїРµСЂРµРґ Р·Р°РєСЂС‹С‚РёРµРј РѕРєРЅР°
 	private: System::Void EditWindow_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
-		dataBase->UploadData(); // выгрузка всех данных в файл
+		dataBase->UploadData(); // РІС‹РіСЂСѓР·РєР° РІСЃРµС… РґР°РЅРЅС‹С… РІ С„Р°Р№Р»
 	}
 	private: System::Void EditWindow_EnabledChanged(System::Object^ sender, System::EventArgs^ e) {
 		if ((addForm != nullptr) && (!addForm->data_added))
@@ -470,7 +470,7 @@ namespace InstitutesBase {
 		{
 			data_changed = false;
 		}
-		if (data_changed)	// если были изменены данные 
+		if (data_changed)	// РµСЃР»Рё Р±С‹Р»Рё РёР·РјРµРЅРµРЅС‹ РґР°РЅРЅС‹Рµ 
 		{
 			data_changed = false;
 
@@ -488,7 +488,7 @@ namespace InstitutesBase {
 			btn_edit->Enabled = false;
 			DeleteBtn->Enabled = false;
 		}
-		else if (data_added)	//если были добавлены данные
+		else if (data_added)	//РµСЃР»Рё Р±С‹Р»Рё РґРѕР±Р°РІР»РµРЅС‹ РґР°РЅРЅС‹Рµ
 		{
 			data_added = false;
 
@@ -528,7 +528,7 @@ namespace InstitutesBase {
 }
 
 /*
-		   // обработчик события изменения состояния видимости данного окна
+		   // РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РёР·РјРµРЅРµРЅРёСЏ СЃРѕСЃС‚РѕСЏРЅРёСЏ РІРёРґРёРјРѕСЃС‚Рё РґР°РЅРЅРѕРіРѕ РѕРєРЅР°
 	private: System::Void EditWindow_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
 		if ((addForm != nullptr) && (!addForm->data_added))
 		{
@@ -538,7 +538,7 @@ namespace InstitutesBase {
 		{
 			data_changed = false;
 		}
-		if (data_changed)	// если были изменены данные
+		if (data_changed)	// РµСЃР»Рё Р±С‹Р»Рё РёР·РјРµРЅРµРЅС‹ РґР°РЅРЅС‹Рµ
 		{
 
 			/*if (!data_added)
@@ -558,7 +558,7 @@ this->DrawData();
 //DataBaseTable_CellClick(DataBaseTable, gcnew DataGridViewCellEventArgs(0, sel_row));
 /*}
 		}
-		else if (data_added)	//если были добавлены данные
+		else if (data_added)	//РµСЃР»Рё Р±С‹Р»Рё РґРѕР±Р°РІР»РµРЅС‹ РґР°РЅРЅС‹Рµ
 		{
 		data_added = false;/*
 		data_changed = false;
