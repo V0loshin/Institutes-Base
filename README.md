@@ -1,2 +1,2 @@
 # Institutes-Base
-Windows Forms app in C++ (study project)
+Windows Forms app in C++/Cli (study project)
